@@ -5,88 +5,112 @@
     ViewData["Title"] = "";
 }
 
-<div class="banner-topo">
-        <img src="~/images/banner-oishii.jpg" width="100%">
-   </div> 
+<div class="container">
+    <div class="row" id="banner-topo">
+        <div class="col">
+            <div class="banner-topo">
+                    <img src="~/images/banner-oishii.jpg">
+            </div> 
+        </div> 
+    </div> 
+</div> 
 
 <section class="produtos">
-<div class ="prod-col-1 text-center"><br>
-    <h1><p class="titulo2 vermelho">Produtos em destaques</p></h1>
-</div>
-    <table class="content-table">
-        <thead>
-            <tr  class="container text-center">
-                <strong>
-                <th>Produto</th>
-                <th>Peso</th>
-                <th>Valor Unitário</th>
-                <th>Quantidade</th> 
-                <th>Modo de Usar</th>         
-                </strong> 
-            </tr>
-        </thead>
+    <div class="container" id="formulario-index">
+        <div class="row">
+            <div class="col" id="destaque">
+                <div class ="text-center"><br>
+                    <h1 id="ProdDes"><p class="titulo2 vermelho" id="ProDestaques">Produtos em destaques</p></h1>
+                </div>
 
-        <tbody>
+                 <div class="container" id="Title_Produto">
+                
+                <table class="content-table">
+                            <thead>
+                                <tr  class="container text-center">
+                                    <strong>
+                                    <th>Produto</th>
+                                    <th>Peso</th>
+                                    <th>Valor Unitário</th>
+                                    <th>Quantidade</th> 
+                                    <th>Modo de Usar</th>         
+                                    </strong> 
+                                </tr>
+                            </thead>
 
-            <tr  class="container text-center">
-                <td>Tempero Alho e Sal</td>
-                <td>300 gr</td>
-                <td>R$ 8,00</td>
-                <td>01 Un</td>
-                <td><a class="btn btn-outline-success" href="/Home/Receitas">Visualizar</a></td>
-            </tr>
-            
-             @foreach (Produto item in Model)
-             {
-                <tr  class="container text-center">
-                    <td>@item.Nome</td>
-                    <td>@item.Peso gr</td>
-                    <td>@item.Valor.ToString("C")</td>
-                    <td>@item.Quantidade.ToString("D2") Un</td>
-                    <td><a class="btn btn-outline-success" href="/Home/Receitas">Visualizar</a></td>
-                </tr>
-            }
+                            <tbody>
 
-        </tbody>
+                                <tr  class="container text-center">
+                                    <td>Tempero Alho e Sal</td>
+                                    <td>300 gr</td>
+                                    <td>R$ 8,00</td>
+                                    <td>01 Un</td>
+                                    <td><a class="btn btn-outline-success" id="btn-index" href="/Home/Receitas">Visualizar</a></td>
+                                </tr>
+                                
+                                @foreach (Produto item in Model)
+                                {
+                                    <tr  class="container text-center">
+                                        <td>@item.Nome</td>
+                                        <td>@item.Peso gr</td>
+                                        <td>@item.Valor.ToString("C")</td>
+                                        <td>@item.Quantidade.ToString("D2") Un</td>
+                                        <td><a class="btn btn-outline-success" id="btn-index" href="/Home/Receitas">Visualizar</a></td>
+                                    </tr>
+                                }
 
-       
-         <tfoot>
-      <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tfoot>
-    </table>
+                            </tbody>
+
+                        
+                            <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tfoot>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!---------------------------------Sobre a Empresa-------------------------------------------------------------->
 
 
 <section class="Sobre">
-    <div class="wrapper" id="quem_somos">
-            <p class="titulo2 vermelho">Conheça nossa história</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="wrapper" id="quem_somos">
+                    <p class="titulo2 vermelho">Conheça nossa história</p>
+                </div>      
+
+                <div class="container" id="Title_Historia">
+
+            
+                <p class="descricao" id="TXT_Historia" align="justify">Oishi Temperos é uma loja de temperos caseiros na forma artesanal, a proprietária Sra. Gisele Tatiane sempre teve um desejo 
+                    de ser uma empreendedora. Ela morou alguns anos no Japão e ganhou muitas experiências com a cultura do país, uma delas foi 
+                    sobre o valor de uma alimentação saudável. Retornando para o Brasil ela decidiu abrir sua própria empresa de temperos 
+                    artesanais, pois seus temperos são livres de conservantes químicos, assim ela ajuda as pessoas a ter uma alimentação mais 
+                    saudável, o nome de sua loja é uma junção de uma palavra japonesa: Oishi que significa (Gostoso, Saboroso ou Delicioso) 
+                    com a palavra Temperos. Ela começou vendendo para seus familiares e amigos, mas já está se preparando para fornecer seus             temperos para mercados e varejos, foi onde ela sentiu a necessidade de divulgar sua marca e seus produtos de modo mais amplo, 
+                    sua visão é estar entre as maiores empresas de temperos artesanais da América Latina, sendo reconhecida por seus parceiros e 
+                    clientes pela qualidade dos produtos e pela excelência gestão empresarial.<p></p>
+                          
+
+                    <p class="titulo2 vermelho"> Sobre </p>
+
+                    <p class="descricao" id="TXT_Sobre" align="justify">A Oishi é uma fábrica de especiarias, molhos, temperos e condimentos. Oferecemos aos nossos clientes uma grande 
+                    variedade de produtos, feitos com total dedicação para tornar seu dia a dia mais prático e saboroso.</p>
+
+                </div>
+        </div>
     </div>
-
-    <div class="container">
-
-     <p class="descricao" align="justify">Oishi Temperos é uma loja de temperos caseiros na forma artesanal, a proprietária Sra. Gisele Tatiane sempre teve um desejo 
-        de ser uma empreendedora. Ela morou alguns anos no Japão e ganhou muitas experiências com a cultura do país, uma delas foi 
-        sobre o valor de uma alimentação saudável. Retornando para o Brasil ela decidiu abrir sua própria empresa de temperos 
-        artesanais, pois seus temperos são livres de conservantes químicos, assim ela ajuda as pessoas a ter uma alimentação mais 
-        saudável, o nome de sua loja é uma junção de uma palavra japonesa: Oishi que significa (Gostoso, Saboroso ou Delicioso) 
-        com a palavra Temperos. Ela começou vendendo para seus familiares e amigos, mas já está se preparando para fornecer seus             temperos para mercados e varejos, foi onde ela sentiu a necessidade de divulgar sua marca e seus produtos de modo mais amplo, 
-        sua visão é estar entre as maiores empresas de temperos artesanais da América Latina, sendo reconhecida por seus parceiros e 
-        clientes pela qualidade dos produtos e pela excelência gestão empresarial.<p></p>
-                
-        <p class="titulo2 vermelho"> Sobre </p>
-
-        <p class="descricao" align="justify">A Oishi é uma fábrica de especiarias, molhos, temperos e condimentos. Oferecemos aos nossos clientes uma grande 
-        variedade de produtos, feitos com total dedicação para tornar seu dia a dia mais prático e saboroso.</p>
-
-    </div>
+</div>          
                             
 <!---------------------------------Missão, Visão e Valores-------------------------------------------------------------->
 
@@ -114,4 +138,3 @@
         </div>
     </div>
 </section>
-

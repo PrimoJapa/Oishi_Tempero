@@ -1,335 +1,5453 @@
 ﻿/*-------css em todo projeto----------*/
 
 * {
-	padding: 0;
-	margin: 0;
-	text-decoration: none;
-	list-style: none;
 	box-sizing: border-box;
 }
 
 body {
-	font-family: montserrat;
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
 }
 
-nav {
-	background: #53A801;
-	height: 70px;
-	width: 100%;
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #53A801;
+  width: 100%;
 }
 
-nav ul{
-	width: auto;
-  float: right;
-  margin-top: 8px;
+header .brand-title{
+  margin: .5rem;
 }
 
-nav li{
-  display: inline-block;
+header .navbar-links ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header .navbar-links li{
+  list-style: none;
+
+}
+
+header .navbar-links li {
+  text-decoration: none;
+  color: #000000;
+  padding: 0.1rem;
+  display: block;
+}
+
+header .navbar-links li:hover {
+  background-color: #b4f17a;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  margin: 3% 0 0 0;
+}
+
+@media (max-width: 960px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+}
+
+/*medium devices (smart, 0px and up)*/
+@media (min-width: 0px)  { 
+
+    /*-------Index----------*/
+  
+  #banner-topo img{
+    position:relative;
+    width: 110%;
+    margin: 5% 0 -7% -5%;
+   }
+
+#ProDestaques {
+  font-size: 16px;
+}   
+ 
+ .titulo2 {
+   font-size: 16px;
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: 700;
+   line-height: 1.2;
+ }
+
+ .vermelho {
+   color: #ff0000;
+  
+ }
+ 
+ .container .descricao {
+   margin: auto;
+ }
+
+ #quem_somos p{
+   line-height: 1.2;
+   font-size: 15px;
+   margin: 0 0 -1% 0;
+ }
+
+ #Title_Historia #TXT_Historia{
+   margin-top: 2%;
+ }
+
+ #Title_Historia #TXT_Sobre {
+   margin: -8% 0 -25% 0;
+ }
+ 
+ /* ----------Produtos/Catalago------------*/
+ 
+ .content-table {
+   border-collapse: collapse;
+   margin: -5% 0 2% -13%;
+   font-size: 0.9em;
+   min-width: 100%;
+   border-radius: 5px 5px 0 0;
+   overflow: hidden;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+ }
+
+ .content-table input{
+   width: 40px;
+   height: 30px;
+   padding-left: 10px;
+   font-size: 10px;
+   margin-right: 10px;
+   border: 1px solid #000000;
+ }
+ 
+ .content-table thead tr {
+   background-color: #53A801;
+   color: #ffffff;
+   text-align: left;
+   font-weight: bold;
+ }
+ 
+ .content-table thead tr td{
+   letter-spacing: 1px;
+   color: rgb(0, 0, 0);
+   padding: 8px;
+ }
+ 
+ .content-table tfoot tr td {
+   background-color: #b4f17a;
+   color: #000000;
+   text-align: center;
+   font-weight: bold;
+ }
+ 
+ .content-table th,
+ .content-table td {
+   padding: 5px 8px;
+   font-size: 5px;
+   letter-spacing: 1px;
+   color: rgb(0, 0, 0); 
+ }
+ 
+ .content-table tfoot tr td{
+   font-size: 18px;
+   letter-spacing: 1px;
+   color: rgb(0, 0, 0);
+   padding: 8px;
+ }
+ 
+ .content-table tfoot tr:last-of-type {
+   border-bottom: 2px solid #53A801;
+ }
+ 
+ #btn-index{
+   width: 100%;
+   height: 10%;
+   font-size: 5px;
+   
+ }
+ 
+ /*-------Missão, Visão e Valores----------*/
+ 
+ .avaliacoes {
+   padding-top: 100px;
+ }
+ 
+ .avaliacoes .col-3 {
+   background: #afafad2a;
+   text-align: justify;
+   padding: 40px 20px;
+   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+   cursor: pointer;
+   transition: transform 0.5s;
+   
+ }
+ 
+ .avaliacoes .col-3:hover {
+   transform: translateY(-10px);
+ }
+ 
+ .small-container {
+   max-width: 1080px;
+   margin: auto;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+ 
+ .row {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: space-around;
+ }
+ 
+ .col-3 {
+   flex-basis: 30%;
+   min-width: 250px;
+   margin-bottom: 30px;
+ }
+ 
+ .col-3 p {
+   font-size: 15px;
+   margin: 12px 0;
+   color: black;
+ }
+ 
+ .laranja {
+   color: #ff0000;
+   font-size: 25px;
+ }
+ 
+ /* ----------Parte do formulario Contato------------*/
+ 
+ .telacontato * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ #Banner-Contato img{
+   margin-top: 2%;
+ }
+
+ #contato h1 {
+   font-size: 16px;
+ }
+ 
+ .telacontato {
+   background: #000000;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+   padding-right: 1rem;
+   padding-left: 1rem;
+   margin-top: 5%;
+ }
+ 
+ .telacontato h1,
+ .telacontato h2 {
+   font-size: 3rem;
+   color: rgb(255, 255, 255);
+   margin-bottom: 2rem;
+   text-align: center;
+   line-height: 1.2;
+ }
+ 
+ .telacontato h1::before {
+   content: "📧";
+   display: block;
+ }
+ 
+ .telacontato h2::before {
+   content: "🐅";
+   display: block;
+ }
+ 
+ .telacontato form {
+   width: 100%;
+   max-width: 32rem;
+   font-size: 1.125rem;
+ }
+ 
+ .telacontato form label,
+ .telacontato form input,
+ .telacontato form textarea,
+ .telacontato form button {
+   display: block;
+   width: 100%;
+ }
+ 
+ .telacontato form label {
+   color: rgb(255, 255, 255);
+   line-height: 1;
+   margin-bottom: 0.5rem;
+   font-size: 13px;
+ }
+ 
+ .telacontato form input,
+ .telacontato form textarea {
+   font: inherit;
+   padding: 0.8rem;
+   margin-bottom: 1rem;
+   border: 1px solid transparent;
+   border-radius: 8px;
+   transition: border-color, box-shadow 0.2s;
+ }
+ 
+ .telacontato form textarea {
+   min-height: 13rem;
+   resize: vertical;
+ }
+ 
+ .telacontato form input:hover,
+ .telacontato form input:focus,
+ .telacontato form textarea:hover,
+ .telacontato form textarea:focus {
+   outline: none;
+   border-color: rgb(255, 0, 0);
+   box-shadow: 0 0 0 3px #ff4d4d;
+ }
+ 
+ .telacontato form button {
+   display: block;
+   padding: 1rem;
+   background: #ff0000;
+   color: rgb(255, 255, 255);
+   font: inherit;
+   text-transform: uppercase;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: 0.2s;
+ }
+ 
+ .telacontato form button:hover,
+ .telacontato form button:focus {
+   outline: none;
+   background: rgb(255, 0, 0);
+ }
+
+ #formulario h5{
+  color: #ff0000;
+  font-size: 11px;
+  margin: 0 0 3% 0;
+  text-align: center;
+  }
+
+ /* ----------Parte login------------*/
+
+ #Login_Title h3{
+  font-size: 40px;
+}
+
+ #btn_entrar_login input{
+   padding: 10px 40px;
+   margin: 0 0 0 0;
+   display: flex;
+ }
+
+ #btn_cancelar_login a{
+   padding: 10px 31px;
+   margin-left: 0;
+ }
+ 
+ /* ----------Parte receitas------------*/
+
+ #banner-receitas img{
+   width: 100%;
+   margin-top: 2%;
+ }
+ 
+ .video-conteudo{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ 
+ .card .video{
+  width:10rem;
+  height:5rem;
+  margin:8% 0 2% 13%;
+   box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+   overflow: hidden;
+   border-radius: 1rem;
+ }
+ 
+ div .card{
+   margin: 2% 0 2% 0;
+   text-align:center;
+ }
+ 
+ .descricao{
+   margin: 10px auto 10px auto;
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-top:0px;
+   margin-bottom: auto;
+  
+ }
+
+ .card span h4{
+   font-size: 20px;
+ }
+ 
+ .video-conteudo .video{
+   width:10rem;
+   height:5rem;   
+   margin:8% 0 2% 13%;
+   box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+   overflow: hidden;
+   border-radius: 1rem;
+ }
+ 
+ .video-conteudo .video video{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   outline: none;
+   border: none;
+   cursor: pointer;
+ }
+ 
+ .video-conteudo .video video:hover{
+   transition: .2s linear;
+   transform: scale(1.3);
+ }
+ 
+ .video-conteudo .video .active{
+   position: fixed;
+   top: 50%; left: 50%;
+   transform: translate(-50%, -50%);
+   height: auto;
+   width: 80%;
+   box-shadow: 0 0 0 100vh rgba(0,0,0,.7);
+   z-index: 1;
+ }
+ 
+ .video-conteudo .video .active:hover{
+   transition: none;
+   transform: translate(-50%, -50%) scale(1);
+ }
+ 
+ /*-------Localização mapa---------------------------*/
+ 
+ #Banner-Onde{
+   margin-top: 2%;
+ }
+
+ .mapaa iframe {
+   align-items: center;
+   justify-content:center;
+   display: flex;
+   width: 100%;
+   height: 500px;
+ }
+
+ #TituloOnde {
+   font-size: 19px;
+   line-height: 99%;
+   margin-top: 3%;
+ }
+
+ /* ----------Parte Lista Usuário------------*/
+
+ .homet img{
+   margin-top: 2%;
+   margin-left: -3%;
+   width: 105%;
+   height: auto;
+ }
+
+ #Cad_N_Usuario a{
+  justify-content: center;
+  padding: 1% 10%;
+}
+
+ #Title_Lista_Usuario h3{
+    font-size: 20px;
+    margin: -10% 0 5% 0;
+ }
+
+ #tabela_Lista_Usuario{
+  margin: 0 0 0 -8.5%;
+   
+ }
+
+ #tabela_Lista_Usuario tr,
+ #tabela_Lista_Usuario td{
+  font-size: 3.2px;
+  text-align: center;
+  margin-right: -4px;
+ }
+
+ #btn_Lista_Usuario_Editar{
+  padding: 1px 3px;
+  font-size: 5px;
+  
+  margin: 2% 15% 0 -60%;
+ }
+
+ #btn_Lista_Usuario_Deletar{
+  padding: 1px 3px;
+  font-size: 5px;
+  margin: 0 -50% 0 0;
+ }
+
+ /* ----------Parte Cadastrar Usuário------------*/
+
+ #title_cad_N_Usuario h3{
+   font-size: 25px;
+ }
+
+ #btn_Cad_N_Usuario_Cadastrar input{
+  padding: 10px 40px;
+  margin-left: 10%;
+ }
+
+ #btn_Cad_N_Usuario_Limpar input{
+  padding: 10px 46px;
+  margin-left: 10%;
+ }
+
+ #btn_Cad_N_Usuario_Cancelar a{
+  padding: 10px 41px;
+  margin-left: 10%;
+ }
+
+ /* ----------Parte Editar Usuário------------*/
+ 
+#title_Editar_Cad h3{
+  font-size: 25px;
+}
+
+#Tipo_Conta{
+  font-size: 10px;
+  text-align: center;
+}
+
+#btn_Editar_Cad input{
+  padding: 10px 40px;
+  margin-left: 10%;
+}
+
+#btn_Cancel_Edit_Cad a{
+  padding: 10px 41px;
+  margin-left: 10%;
+}
+
+/* ----------Parte Listagem Produto------------*/
+
+.homet img{
+  margin-top: 2%;
+  margin-left: -3%;
+  width: 105%;
+  height: auto;
+}
+
+#Cad_N_Produto a{
+ justify-content: center;
+ padding: 1% 10%;
+}
+
+#Title_Lista_Produto h3{
+   font-size: 20px;
+   margin: -10% 0 5% 0;
+}
+
+#tabela_Lista_Produto{
+ margin: 0 0 0 -10%;
   
 }
 
-nav a{
-  text-align: center;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2vw;
+#tabela_Lista_Produto tr,
+#tabela_Lista_Produto td{
+ font-size: 4px;
+ text-align: center;
+ margin-right: -4px;
 }
 
-nav a:hover{
-  color: #ffffff;
-  transition: 0.5s;
+#btn_Lista_Produto_Editar{
+ padding: 1px 3px;
+ font-size: 5px;
+ 
+ margin: 2% 15% 0 -60%;
 }
 
-/*-------Index----------*/
+#btn_Lista_Produto_Deletar{
+ padding: 1px 3px;
+ font-size: 5px;
+ margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastro Produto------------*/
+
+#title_Cad_Produto h3{
+  font-size: 25px;
+}
+
+#btn_Cad_N_Produto_Cadastrar input{
+ padding: 10px 40px;
+ margin-left: 10%;
+}
+
+#btn_Cad_N_Produto_Limpar input{
+ padding: 10px 46px;
+ margin-left: 10%;
+}
+
+#btn_Cad_N_Produto_Cancelar a{
+ padding: 10px 41px;
+ margin-left: 10%;
+}
+
+ /* ----------Parte Editar Produto------------*/
+ 
+ #title_edit_Produto h3{
+  font-size: 25px;
+}
+
+#btn_Editar_edit input{
+  padding: 10px 40px;
+  margin-left: 10%;
+}
+
+#btn_Cancel_Edit_edit a{
+  padding: 10px 41px;
+  margin-left: 10%;
+}
+
+/* ----------Parte Mensagem------------*/
+
+#menssagem h3{
+  font-size: 25px;
+}
+
+#tabela_Lista_Menssagem {
+  margin: 0 0 0 -11%;
+}
+
+#tabela_Lista_Menssagem tr,
+#tabela_Lista_Menssagem td{
+ font-size: 2px;
+ max-width: 50ch;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+
+}
+
+#div2 {
+  white-space: nowrap; 
+  width: 12em; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  
+}
+
+#btn_Lista_Menssagem_Deletar{
+  margin-left: -15px; 
+}
+
+#btn_Lista_Menssagem_Deletar a{
+ padding: 1px 3px;
+ font-size: 5px;
+ 
+ 
+}
+
+ /* Sticky footer styles
+ -------------------------------------------------- */
+ html {
+   position: relative;
+   min-height: 100%;
+ }
+ 
+ body {
+   /* Margin bottom by footer height */
+   margin-bottom: 60px;
+}
+.footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ white-space: nowrap;
+ line-height: 60px; /* Vertically center the text there */
+ text-align: center;
+ font-size: 10px;
+}
+  }
+
+/*medium devices (smart, 350px and up)*/
+@media (min-width: 350px)  { 
+
+  /*-------Index----------*/
+
+#banner-topo img{
+  position:relative;
+  width: 110%;
+  margin: 5% 0 -7% -5%;
+ }
+
+#ProDestaques {
+font-size: 16px;
+}   
+
+#destaque{
+  margin: 0 -10% 0 0;
+}
 
 .titulo2 {
-  font-size: 35px;
-  line-height: 50px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
+ font-size: 16px;
+ text-align: center;
+ text-transform: uppercase;
+ font-weight: 700;
+ line-height: 1.2;
 }
 
 .vermelho {
-  color: #ff0000;
+ color: #ff0000;
+
 }
 
 .container .descricao {
-  margin: auto;
+ margin: auto;
+}
+
+#quem_somos p{
+ line-height: 1.2;
+ font-size: 15px;
+ margin: 0 0 -1% 0;
+}
+
+#Title_Historia #TXT_Historia{
+ margin-top: 2%;
+}
+
+#Title_Historia #TXT_Sobre {
+ margin: -8% 0 -25% 0;
 }
 
 /* ----------Produtos/Catalago------------*/
 
 .content-table {
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 0.9em;
-  min-width: 100%;
-  border-radius: 5px 5px 0 0;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+ border-collapse: collapse;
+ margin: -5% 0 2% -13%;
+ font-size: 0.9em;
+ min-width: 100%;
+ border-radius: 5px 5px 0 0;
+ overflow: hidden;
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .content-table input{
-  width: 40px;
-  height: 30px;
-  padding-left: 10px;
-  font-size: 20px;
-  margin-right: 10px;
-  border: 1px solid #000000;
+ width: 40px;
+ height: 30px;
+ padding-left: 10px;
+ font-size: 10px;
+ margin-right: 10px;
+ border: 1px solid #000000;
 }
 
 .content-table thead tr {
-  background-color: #53A801;
-  color: #ffffff;
-  text-align: left;
-  font-weight: bold;
+ background-color: #53A801;
+ color: #ffffff;
+ text-align: left;
+ font-weight: bold;
 }
 
 .content-table thead tr td{
-  font-size: 18px;
-  letter-spacing: 1px;
-  color: rgb(0, 0, 0);
-  padding: 8px;
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0);
+ padding: 8px;
 }
 
 .content-table tfoot tr td {
-  background-color: #b4f17a;
-  color: #000000;
-  text-align: center;
-  font-weight: bold;
+ background-color: #b4f17a;
+ color: #000000;
+ text-align: center;
+ font-weight: bold;
 }
 
 .content-table th,
 .content-table td {
-  padding: 12px 15px;
-  font-size: 18px;
-  letter-spacing: 1px;
-  color: rgb(0, 0, 0);
-  
+ padding: 5px 8px;
+ font-size: 5px;
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0); 
 }
 
 .content-table tfoot tr td{
-  font-size: 18px;
-  letter-spacing: 1px;
-  color: rgb(0, 0, 0);
-  padding: 8px;
+ font-size: 18px;
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0);
+ padding: 8px;
 }
 
 .content-table tfoot tr:last-of-type {
-  border-bottom: 2px solid #53A801;
+ border-bottom: 2px solid #53A801;
+}
+
+#btn-index{
+ width: 100%;
+ height: 10%;
+ font-size: 5px;
+ 
 }
 
 /*-------Missão, Visão e Valores----------*/
 
 .avaliacoes {
-  padding-top: 100px;
+ padding-top: 100px;
 }
 
 .avaliacoes .col-3 {
-  background: #afafad2a;
-  text-align: justify;
-  padding: 40px 20px;
-  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.5s;
+ background: #afafad2a;
+ text-align: justify;
+ padding: 40px 20px;
+ box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+ cursor: pointer;
+ transition: transform 0.5s;
+ 
 }
 
 .avaliacoes .col-3:hover {
-  transform: translateY(-10px);
+ transform: translateY(-10px);
 }
 
 .small-container {
-  max-width: 1080px;
-  margin: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+ max-width: 1080px;
+ margin: auto;
+ padding-left: 20px;
+ padding-right: 20px;
 }
 
 .row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-around;
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ justify-content: space-around;
 }
 
 .col-3 {
-  flex-basis: 30%;
-  min-width: 250px;
-  margin-bottom: 30px;
+ flex-basis: 30%;
+ min-width: 250px;
+ margin-bottom: 30px;
 }
 
 .col-3 p {
-  font-size: 15px;
-  margin: 12px 0;
-  color: black;
+ font-size: 15px;
+ margin: 12px 0;
+ color: black;
 }
 
 .laranja {
-  color: #ff0000;
-  font-size: 25px;
-}
-
-/*------ajustar Botão---------------------------*/
-
-.form-group .btn_cancelar a{
-	justify-content: center;
-	padding: 10px 213px;
-	margin-left: 0;
-	
-}
-
-.form-group .btn_cadastrar input{
-	justify-content: center;
-	padding: 10px 210px;
-	margin-left: 0;
-}
-
-.form-group .btn_atualizar input{
-	justify-content: center;
-	padding: 10px 210px;
-	margin-left: 0;
-}
-
-.form-group .btn_login_entrar input{
-	padding: 10px 90px;
-	margin: 10px 10px 20px;
-	
-}
-
-.form-group .btn_login_cancelar a{
-	padding: 10px 90px;
-	margin: 10px 10px 20px;
-	
-}
-
-.form-group .btn_limpar input{
-	justify-content: center;
-	padding: 10px 220px;
-	margin-left: 0;
-	
-}
-
-.btn2 .container a{
-	justify-content: center;
-	padding: 10px 213px;
-	margin-left: 0;
-	
-}
-
-.form-group .btn_cadastrar_se a{
-	justify-content: center;
-	padding: 10px 110px;
-	margin-left: 0;
-	
+ color: #ff0000;
+ font-size: 25px;
 }
 
 /* ----------Parte do formulario Contato------------*/
 
 .telacontato * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+#banner-contato img{
+margin: 2% 0 -2% 0;
+}
+
+#contato h1 {
+ font-size: 22px;
+}
+
+#contato p {
+  
+  margin-top: 5%;
+  font-size: 30px;
 }
 
 .telacontato {
-  background: #000000;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  padding-right: 1rem;
-  padding-left: 1rem;
+ background: #000000;
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+ padding-right: 1rem;
+ padding-left: 1rem;
+ margin-top: 5%;
 }
 
 .telacontato h1,
 .telacontato h2 {
-  font-size: 3rem;
-  color: rgb(255, 255, 255);
-  margin-bottom: 2rem;
-  text-align: center;
-  line-height: 1.2;
+ font-size: 3rem;
+ color: rgb(255, 255, 255);
+ margin-bottom: 2rem;
+ text-align: center;
+ line-height: 1.2;
 }
 
 .telacontato h1::before {
-  content: "📧";
-  display: block;
+ content: "📧";
+ display: block;
+ font-size: 30px;
 }
 
 .telacontato h2::before {
-  content: "🐅";
-  display: block;
+ content: "🐅";
+ display: block;
 }
 
 .telacontato form {
-  width: 100%;
-  max-width: 32rem;
-  font-size: 1.125rem;
+ width: 100%;
+ max-width: 32rem;
+ font-size: 1.125rem;
 }
 
 .telacontato form label,
 .telacontato form input,
 .telacontato form textarea,
 .telacontato form button {
-  display: block;
-  width: 100%;
+ display: block;
+ width: 100%;
 }
 
 .telacontato form label {
-  color: rgb(255, 255, 255);
-  line-height: 1;
-  margin-bottom: 0.5rem;
+ color: rgb(255, 255, 255);
+ line-height: 1;
+ margin-bottom: 0.5rem;
+ font-size: 13px;
 }
 
 .telacontato form input,
 .telacontato form textarea {
-  font: inherit;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  transition: border-color, box-shadow 0.2s;
+ font: inherit;
+ padding: 0.8rem;
+ margin-bottom: 1rem;
+ border: 1px solid transparent;
+ border-radius: 8px;
+ transition: border-color, box-shadow 0.2s;
 }
 
 .telacontato form textarea {
-  min-height: 13rem;
-  resize: vertical;
+ min-height: 13rem;
+ resize: vertical;
 }
 
 .telacontato form input:hover,
 .telacontato form input:focus,
 .telacontato form textarea:hover,
 .telacontato form textarea:focus {
-  outline: none;
-  border-color: rgb(255, 0, 0);
-  box-shadow: 0 0 0 3px #ff4d4d;
+ outline: none;
+ border-color: rgb(255, 0, 0);
+ box-shadow: 0 0 0 3px #ff4d4d;
 }
 
 .telacontato form button {
-  display: block;
-  padding: 1rem;
-  background: #ff0000;
-  color: rgb(255, 255, 255);
-  font: inherit;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s;
+ display: block;
+ padding: 1rem;
+ background: #ff0000;
+ color: rgb(255, 255, 255);
+ font: inherit;
+ text-transform: uppercase;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ transition: 0.2s;
 }
 
 .telacontato form button:hover,
 .telacontato form button:focus {
-  outline: none;
-  background: rgb(255, 0, 0);
+ outline: none;
+ background: rgb(255, 0, 0);
+}
+
+#formulario h5{
+  color: #ff0000;
+  font-size: 14px;
+  margin: 0 0 3% 0;
+  text-align: center;
+}
+
+/* ----------Parte login------------*/
+
+#Login_Title h3{
+font-size: 40px;
+}
+
+#btn_entrar_login input{
+ padding: 10px 50px;
+ margin: 0 0 0 8%;
+ display: flex;
+}
+
+#btn_cancelar_login a{
+ padding: 10px 41px;
+ margin-left: 8%;
 }
 
 /* ----------Parte receitas------------*/
+
+#banner-receitas img{
+ width: 100%;
+ margin-top: 2%;
+}
+
+.video-conteudo{
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+
+.card .video{
+width:13rem;
+height:5rem;
+margin:8% 0 2% 23%;
+ box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+ overflow: hidden;
+ border-radius: 1rem;
+}
+
+div .card{
+ margin: 2% 0 2% 0;
+ text-align:center;
+}
+
+.descricao{
+ margin: 10px auto 10px auto;
+ margin-left: 5%;
+ margin-right: 5%;
+ margin-top:0px;
+ margin-bottom: auto;
+
+}
+
+.card span h4{
+ font-size: 20px;
+}
+
+.video-conteudo .video{
+ width:15rem;
+ height:6rem;   
+ margin:8% 0 2% 7%;
+ box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+ overflow: hidden;
+ border-radius: 1rem;
+}
+
+.video-conteudo .video video{
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+ outline: none;
+ border: none;
+ cursor: pointer;
+}
+
+.video-conteudo .video video:hover{
+ transition: .2s linear;
+ transform: scale(1.3);
+}
+
+.video-conteudo .video .active{
+ position: fixed;
+ top: 50%; left: 50%;
+ transform: translate(-50%, -50%);
+ height: auto;
+ width: 80%;
+ box-shadow: 0 0 0 100vh rgba(0,0,0,.7);
+ z-index: 1;
+}
+
+.video-conteudo .video .active:hover{
+ transition: none;
+ transform: translate(-50%, -50%) scale(1);
+}
+
+/*-------Localização mapa---------------------------*/
+
+#Banner-Onde{
+ margin-top: 2%;
+}
+
+.mapaa iframe {
+ align-items: center;
+ justify-content:center;
+ display: flex;
+ width: 100%;
+ height: 500px;
+}
+
+#TituloOnde {
+ font-size: 19px;
+ line-height: 99%;
+ margin-top: 3%;
+}
+
+/* ----------Parte Lista Usuário------------*/
+
+.homet img{
+ margin-top: 2%;
+ margin-left: -3%;
+ width: 105%;
+ height: auto;
+}
+
+#Cad_N_Usuario a{
+justify-content: center;
+padding: 1% 10%;
+}
+
+#Title_Lista_Usuario h3{
+  font-size: 20px;
+  margin: -10% 0 5% 0;
+}
+
+#tabela_Lista_Usuario{
+margin: 0 0 0 0;
+ 
+}
+
+#tabela_Lista_Usuario tr,
+#tabela_Lista_Usuario td{
+font-size: 4px;
+text-align: center;
+margin-right: -4px;
+}
+
+#btn_Lista_Usuario_Editar{
+padding: 1px 3px;
+font-size: 5px;
+
+margin: 2% 15% 0 -60%;
+}
+
+#btn_Lista_Usuario_Deletar{
+padding: 1px 3px;
+font-size: 5px;
+margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastrar Usuário------------*/
+
+#title_cad_N_Usuario h3{
+ font-size: 26px;
+}
+
+#btn_Cad_N_Usuario_Cadastrar input{
+padding: 10px 40px;
+margin-left: 23%;
+}
+
+#btn_Cad_N_Usuario_Limpar input{
+padding: 10px 46px;
+margin-left: 23%;
+}
+
+#btn_Cad_N_Usuario_Cancelar a{
+padding: 10px 41px;
+margin-left: 23%;
+}
+
+/* ----------Parte Editar Usuário------------*/
+
+#title_Editar_Cad h3{
+font-size: 26px;
+}
+
+#Tipo_Conta{
+font-size: 10px;
+text-align: center;
+}
+
+#btn_Editar_Cad input{
+padding: 10px 40px;
+margin-left: 23%;
+}
+
+#btn_Cancel_Edit_Cad a{
+padding: 10px 41px;
+margin-left: 23%;
+}
+
+/* ----------Parte Listagem Produto------------*/
+
+.homet img{
+margin-top: 2%;
+margin-left: -3%;
+width: 105%;
+height: auto;
+}
+
+#Cad_N_Produto a{
+justify-content: center;
+padding: 1% 10%;
+}
+
+#Title_Lista_Produto h3{
+ font-size: 20px;
+ margin: -10% 0 5% 0;
+}
+
+#tabela_Lista_Produto{
+margin: 0 0 0 0;
+
+}
+
+#tabela_Lista_Produto tr,
+#tabela_Lista_Produto td{
+font-size: 4px;
+text-align: center;
+margin-right: -4px;
+}
+
+#btn_Lista_Produto_Editar{
+padding: 1px 3px;
+font-size: 5px;
+
+margin: 2% 15% 0 -60%;
+}
+
+#btn_Lista_Produto_Deletar{
+padding: 1px 3px;
+font-size: 5px;
+margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastro Produto------------*/
+
+#title_Cad_Produto h3{
+font-size: 26px;
+}
+
+#btn_Cad_N_Produto_Cadastrar input{
+padding: 10px 40px;
+margin-left: 23%;
+}
+
+#btn_Cad_N_Produto_Limpar input{
+padding: 10px 46px;
+margin-left: 23%;
+}
+
+#btn_Cad_N_Produto_Cancelar a{
+padding: 10px 41px;
+margin-left: 23%;
+}
+
+/* ----------Parte Editar Produto------------*/
+
+#title_edit_Produto h3{
+font-size: 26px;
+}
+
+#btn_Editar_edit input{
+padding: 10px 40px;
+margin-left: 25%;
+}
+
+#btn_Cancel_Edit_edit a{
+padding: 10px 41px;
+margin-left: 25%;
+}
+
+/* ----------Parte Mensagem------------*/
+
+#menssagem h3{
+font-size: 25px;
+}
+
+#tabela_Lista_Menssagem {
+margin: 0 0 0 -9.5%;
+}
+
+#tabela_Lista_Menssagem tr,
+#tabela_Lista_Menssagem td{
+font-size: 3.5px;
+max-width: 50ch;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+}
+
+#div2 {
+white-space: nowrap; 
+width: 12em; 
+overflow: hidden;
+text-overflow: ellipsis; 
+
+}
+
+#btn_Lista_Menssagem_Deletar{
+margin-left: -15px; 
+}
+
+#btn_Lista_Menssagem_Deletar a{
+padding: 1px 3px;
+font-size: 4px;
+
+
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+ position: relative;
+ min-height: 100%;
+}
+
+body {
+ /* Margin bottom by footer height */
+ margin-bottom: 60px;
+}
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+white-space: nowrap;
+line-height: 60px; /* Vertically center the text there */
+text-align: center;
+font-size: 10px;
+}
+}
+  
+/*medium devices (smart, 370px and up)*/
+@media (min-width:370px)  { 
+  
+/*-------Parte Index----------*/
+  
+  #banner-topo img{
+     position:relative;
+     width: 100%;
+     margin: 5% 0 -7% 0;
+    }
+  
+    #ProDestaques {
+      font-size: 22px;
+      padding: 3%;
+    }   
+  
+  .titulo2 {
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .vermelho {
+    color: #ff0000;
+  }
+  
+  .container .descricao {
+    margin: auto;
+  }
+
+  #quem_somos p{
+    line-height: 1.2;
+    font-size: 22px;
+    margin: 0 0 -1% 0;
+  }
+
+  #Title_Historia #TXT_Historia{
+    margin-top: 2%;
+    margin-left: -5%;
+  }
+
+  #Title_Historia #TXT_Sobre {
+    margin: 0 0 -20% 0;
+  }
+  
+  /* ----------Produtos/Catalago------------*/
+  
+  .content-table {
+    border-collapse: collapse;
+    margin: -5% 0 2% -12%;
+    font-size: 0.9em;
+    min-width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .content-table input{
+    width: 40px;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 10px;
+    margin-right: 10px;
+    border: 1px solid #000000;
+  }
+  
+  .content-table thead tr {
+    background-color: #53A801;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .content-table thead tr td{
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+    padding: 8px;
+  }
+  
+  .content-table tfoot tr td {
+    background-color: #b4f17a;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+    font-size: 5px;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0); 
+  }
+  
+  .content-table tfoot tr td{
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+    padding: 8px;
+  }
+  
+  .content-table tfoot tr:last-of-type {
+    border-bottom: 2px solid #53A801;
+  }
+  
+  #btn-index{
+    width: 100%;
+    height: 10%;
+    font-size: 7px;
+    
+  }
+  
+  /*-------Missão, Visão e Valores----------*/
+  
+  .avaliacoes {
+    padding-top: 100px;
+  }
+  
+  .avaliacoes .col-3 {
+    background: #afafad2a;
+    text-align: justify;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+    
+  }
+  
+  .avaliacoes .col-3:hover {
+    transform: translateY(-10px);
+  }
+  
+  .small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    margin: 3% 0 3% 0.01%;
+  }
+  
+  .col-3 p {
+    font-size: 15px;
+    margin: 12px 0;
+    color: black;
+  }
+  
+  .laranja {
+    color: #ff0000;
+    font-size: 25px;
+  }
+  
+  /* ----------Parte do formulario Contato------------*/
+  
+  .telacontato * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  #Login_Title h3{
+    font-size: 50px;
+  }
+
+  #Banner-Contato img{
+    margin-top: 2%;
+  }
+
+  #formulario  h5{
+    color: #ff0000;
+    font-size: 14px;
+    margin: 0 0 3% 0;
+    text-align: center;
+  }
+
+  #contato h1 {
+    font-size: 23px;
+  }
+  
+  .telacontato {
+    background: #000000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-top: 5%;
+  }
+  
+  .telacontato h1,
+  .telacontato h2 {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .telacontato h1::before {
+    content: "📧";
+    display: block;
+  }
+  
+  .telacontato h2::before {
+    content: "🐅";
+    display: block;
+  }
+  
+  .telacontato form {
+    width: 100%;
+    max-width: 32rem;
+    font-size: 1.125rem;
+  }
+  
+  .telacontato form label,
+  .telacontato form input,
+  .telacontato form textarea,
+  .telacontato form button {
+    display: block;
+    width: 100%;
+   
+  }
+  
+  .telacontato form label {
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .telacontato form input,
+  .telacontato form textarea {
+    font: inherit;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: border-color, box-shadow 0.2s;
+  }
+  
+  .telacontato form textarea {
+    min-height: 13rem;
+    resize: vertical;
+  }
+  
+  .telacontato form input:hover,
+  .telacontato form input:focus,
+  .telacontato form textarea:hover,
+  .telacontato form textarea:focus {
+    outline: none;
+    border-color: rgb(255, 0, 0);
+    box-shadow: 0 0 0 3px #ff4d4d;
+  }
+  
+  .telacontato form button {
+    display: block;
+    padding: 1rem;
+    background: #ff0000;
+    color: rgb(255, 255, 255);
+    font: inherit;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .telacontato form button:hover,
+  .telacontato form button:focus {
+    outline: none;
+    background: rgb(255, 0, 0);
+  }
+
+  /* ----------Parte Login------------*/
+
+  #btn_entrar_login input{
+    padding: 10px 50px;
+    margin: 0 0 0 12%;
+    display: flex;
+  }
+
+  #btn_cancelar_login a{
+    padding: 10px 42px;
+    margin-left: 12%;
+  }
+  
+  /* ----------Parte receitas------------*/
+
+  #banner-receitas img{
+    width: 100%;
+    margin-top: 2%;
+  }
+  
+  .video-conteudo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 0%;
+  }
+  
+  .card .video{
+    height:8rem;
+    width:15rem;
+    margin:1rem 0 0 0;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+    overflow: hidden;
+    border-radius: 1rem;
+
+  }
+  
+  div .card{
+    margin: 2% 0 0 0;
+    text-align:center;
+  }
+  
+  .descricao{
+    margin: 10px auto 10px auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top:0px;
+    margin-bottom: auto;
+   
+  }
+
+  .card span h4{
+    font-size: 20px;
+  }
+  
+  .video-conteudo .video{
+    height:8rem;
+    width:15rem;   
+    margin:1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+    overflow: hidden;
+    border-radius: 1rem;
+    
+  }
+  
+  .video-conteudo .video video{
+    height:8rem;
+    width:19rem; 
+    object-fit: cover;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  .video-conteudo .video video:hover{
+    transition: .2s linear;
+    transform: scale(1.3);
+  }
+  
+  .video-conteudo .video .active{
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 80%;
+    box-shadow: 0 0 0 100vh rgba(0,0,0,.7);
+    z-index: 1;
+  }
+  
+  .video-conteudo .video .active:hover{
+    transition: none;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  /*-------Localização mapa---------------------------*/
+  
+  #Banner-Onde{
+    margin-top: 2%;
+  }
+
+  .mapaa iframe {
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    width: 100%;
+    height: 500px;
+  }
+
+  #TituloOnde {
+    font-size: 19px;
+    line-height: 99%;
+    margin-top: 3%;
+  }
+
+  /* ----------Parte Lista Usuário------------*/
+
+ .homet img{
+  margin-top: 2%;
+  margin-left: -3%;
+  width: 105%;
+  height: auto;
+}
+
+#Cad_N_Usuario a{
+ justify-content: center;
+ padding: 1% 10%;
+}
+
+#Title_Lista_Usuario h3{
+   font-size: 25px;
+   margin: -5% 0 5% 0;
+}
+
+#tabela_Lista_Usuario{
+ margin: 0 0 0 0;
+  
+}
+
+#tabela_Lista_Usuario tr,
+#tabela_Lista_Usuario td{
+ font-size: 4px;
+ text-align: center;
+ margin-right: -4px;
+}
+
+#btn_Lista_Usuario_Editar{
+ padding: 1px 3px;
+ font-size: 5px;
+ 
+ margin: 2% 15% 0 -60%;
+}
+
+#btn_Lista_Usuario_Deletar{
+ padding: 1px 3px;
+ font-size: 5px;
+ margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastrar Usuário------------*/
+
+#title_cad_N_Usuario h3{
+  font-size: 25px;
+}
+
+#btn_Cad_N_Usuario_Cadastrar input{
+ padding: 10px 80px;
+ margin-left: 10%;
+}
+
+#btn_Cad_N_Usuario_Limpar input{
+ padding: 10px 86px;
+ margin-left: 10%;
+}
+
+#btn_Cad_N_Usuario_Cancelar a{
+ padding: 10px 81px;
+ margin-left: 10%;
+}
+
+/* ----------Parte Editar Usuário------------*/
+
+#title_Editar_Cad h3{
+ font-size: 35px;
+}
+
+#Tipo_Conta{
+ font-size: 10px;
+ text-align: center;
+}
+
+#btn_Editar_Cad input{
+ padding: 10px 80px;
+ margin-left: 10%;
+}
+
+#btn_Cancel_Edit_Cad a{
+ padding: 10px 81px;
+ margin-left: 10%;
+}
+
+/* ----------Parte Listagem Produto------------*/
+
+.homet img{
+ margin-top: 2%;
+ margin-left: -3%;
+ width: 105%;
+ height: auto;
+}
+
+#Cad_N_Produto a{
+justify-content: center;
+padding: 1% 10%;
+}
+
+#Title_Lista_Produto h3{
+  font-size: 20px;
+  margin: -10% 0 5% 0;
+}
+
+#tabela_Lista_Produto{
+margin: 0 0 0 0;
+ 
+}
+
+#tabela_Lista_Produto tr,
+#tabela_Lista_Produto td{
+font-size: 6px;
+text-align: center;
+margin-right: -4px;
+}
+
+#btn_Lista_Produto_Editar{
+padding: 1px 3px;
+font-size: 5px;
+
+margin: 2% 15% 0 -60%;
+}
+
+#btn_Lista_Produto_Deletar{
+padding: 1px 3px;
+font-size: 5px;
+margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastro Produto------------*/
+
+#title_Cad_Produto h3{
+ font-size: 29px;
+}
+
+#btn_Cad_N_Produto_Cadastrar input{
+padding: 10px 80px;
+margin-left: 10%;
+}
+
+#btn_Cad_N_Produto_Limpar input{
+padding: 10px 86px;
+margin-left: 10%;
+}
+
+#btn_Cad_N_Produto_Cancelar a{
+padding: 10px 81px;
+margin-left: 10%;
+}
+
+/* ----------Parte Editar Produto------------*/
+
+#title_edit_Produto h3{
+ font-size: 35px;
+}
+
+#btn_Editar_edit input{
+ padding: 10px 80px;
+ margin-left: 10%;
+}
+
+#btn_Cancel_Edit_edit a{
+ padding: 10px 81px;
+ margin-left: 10%;
+}
+
+/* ----------Parte Mensagem------------*/
+
+#menssagem h3{
+ font-size: 35px;
+}
+
+#tabela_Lista_Menssagem {
+ margin: 0 0 0 -6%;
+}
+
+#tabela_Lista_Menssagem tr,
+#tabela_Lista_Menssagem td{
+font-size: 4.5px;
+max-width: 29ch;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+}
+
+#div2 {
+ white-space: nowrap; 
+ width: 12em; 
+ overflow: hidden;
+ text-overflow: ellipsis; 
+ 
+}
+
+#btn_Lista_Menssagem_Deletar{
+ margin-left: -5px; 
+}
+
+#btn_Lista_Menssagem_Deletar a{
+padding: 1px 3px;
+font-size: 4.5px;
+
+
+}
+  
+  /* Sticky footer styles
+  -------------------------------------------------- */
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+  text-align: center;
+  font-size: 14px;
+}
+    
+    
+    }  
+
+/*medium devices (smart, 390px and up)*/
+@media (min-width:390px)  { 
+  
+  /*-------Parte Index----------*/
+    
+    #banner-topo img{
+       position:relative;
+       width: 100%;
+       margin: 5% 0 -7% 0;
+      }
+    
+      #ProDestaques {
+        font-size: 22px;
+        display: flex;
+        text-align: center;
+        margin-left: -3%;
+      }   
+    
+    .titulo2 {
+      font-size: 25px;
+      line-height: 50px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    
+    .vermelho {
+      color: #ff0000;
+    }
+    
+    .container .descricao {
+      margin: auto;
+    }
+  
+    #quem_somos p{
+      line-height: 1.2;
+      font-size: 22px;
+      margin: 0 0 -1% 0;
+    }
+  
+    #Title_Historia #TXT_Historia{
+      margin-top: 2%;
+      margin-left: -5%;
+    }
+  
+    #Title_Historia #TXT_Sobre {
+      margin: 0 0 -20% 0;
+    }
+    
+    /* ----------Produtos/Catalago------------*/
+    
+    .content-table {
+      border-collapse: collapse;
+      margin: -5% 0 2% -9%;
+      font-size: 0.9em;
+      min-width: 100%;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+  
+    .content-table input{
+      width: 40px;
+      height: 30px;
+      padding-left: 10px;
+      font-size: 10px;
+      margin-right: 10px;
+      border: 1px solid #000000;
+    }
+    
+    .content-table thead tr {
+      background-color: #53A801;
+      color: #ffffff;
+      text-align: left;
+      font-weight: bold;
+    }
+    
+    .content-table thead tr td{
+      letter-spacing: 1px;
+      color: rgb(0, 0, 0);
+      padding: 8px;
+    }
+    
+    .content-table tfoot tr td {
+      background-color: #b4f17a;
+      color: #000000;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    .content-table th,
+    .content-table td {
+      padding: 12px 15px;
+      font-size: 5px;
+      letter-spacing: 1px;
+      color: rgb(0, 0, 0); 
+    }
+    
+    .content-table tfoot tr td{
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: rgb(0, 0, 0);
+      padding: 8px;
+    }
+    
+    .content-table tfoot tr:last-of-type {
+      border-bottom: 2px solid #53A801;
+    }
+    
+    #btn-index{
+      width: 100%;
+      height: 10%;
+      font-size: 7px;
+      
+    }
+    
+    /*-------Missão, Visão e Valores----------*/
+    
+    .avaliacoes {
+      padding-top: 100px;
+    }
+    
+    .avaliacoes .col-3 {
+      background: #afafad2a;
+      text-align: justify;
+      padding: 40px 20px;
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.5s;
+      
+    }
+    
+    .avaliacoes .col-3:hover {
+      transform: translateY(-10px);
+    }
+    
+    .small-container {
+      max-width: 1080px;
+      margin: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .col-3 {
+      flex-basis: 30%;
+      min-width: 250px;
+      margin-bottom: 30px;
+      margin: 3% 0 3% 0.01%;
+    }
+    
+    .col-3 p {
+      font-size: 15px;
+      margin: 12px 0;
+      color: black;
+    }
+    
+    .laranja {
+      color: #ff0000;
+      font-size: 25px;
+    }
+    
+    /* ----------Parte do formulario Contato------------*/
+    
+    .telacontato * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    #Login_Title h3{
+      font-size: 50px;
+    }
+  
+    #Banner-Contato img{
+      margin-top: 2%;
+    }
+  
+    #contato h1 {
+      font-size: 24px;
+    }
+    
+    .telacontato {
+      background: #000000;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      margin-top: 5%;
+    }
+    
+    .telacontato h1,
+    .telacontato h2 {
+      font-size: 3rem;
+      color: rgb(255, 255, 255);
+      margin-bottom: 2rem;
+      text-align: center;
+      line-height: 1.2;
+    }
+    
+    .telacontato h1::before {
+      content: "📧";
+      display: block;
+    }
+    
+    .telacontato h2::before {
+      content: "🐅";
+      display: block;
+    }
+    
+    .telacontato form {
+      width: 100%;
+      max-width: 32rem;
+      font-size: 1.125rem;
+    }
+    
+    .telacontato form label,
+    .telacontato form input,
+    .telacontato form textarea,
+    .telacontato form button {
+      display: block;
+      width: 100%;
+    }
+    
+    .telacontato form label {
+      color: rgb(255, 255, 255);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    
+    .telacontato form input,
+    .telacontato form textarea {
+      font: inherit;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      transition: border-color, box-shadow 0.2s;
+    }
+    
+    .telacontato form textarea {
+      min-height: 13rem;
+      resize: vertical;
+    }
+    
+    .telacontato form input:hover,
+    .telacontato form input:focus,
+    .telacontato form textarea:hover,
+    .telacontato form textarea:focus {
+      outline: none;
+      border-color: rgb(255, 0, 0);
+      box-shadow: 0 0 0 3px #ff4d4d;
+    }
+    
+    .telacontato form button {
+      display: block;
+      padding: 1rem;
+      background: #ff0000;
+      color: rgb(255, 255, 255);
+      font: inherit;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    
+    .telacontato form button:hover,
+    .telacontato form button:focus {
+      outline: none;
+      background: rgb(255, 0, 0);
+    }
+  
+     /* ----------Parte Login------------*/
+  
+     #btn_entrar_login input{
+      padding: 10px 50px;
+      margin: 0 0 0 12%;
+      display: flex;
+    }
+  
+    #btn_cancelar_login a{
+      padding: 10px 42px;
+      margin-left: 12%;
+    }
+    
+    /* ----------Parte receitas------------*/
+  
+    #banner-receitas img{
+      width: 100%;
+      margin-top: 2%;
+    }
+    
+    .video-conteudo{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-left: 0%;
+    }
+    
+    .card .video{
+      height:8rem;
+      width:17rem;
+      margin:1rem 0 0 0;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+      overflow: hidden;
+      border-radius: 1rem;
+  
+    }
+    
+    div .card{
+      margin: 2% 0 0 0;
+      text-align:center;
+    }
+    
+    .descricao{
+      margin: 10px auto 10px auto;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top:0px;
+      margin-bottom: auto;
+     
+    }
+  
+    .card span h4{
+      font-size: 20px;
+    }
+    
+    .video-conteudo .video{
+      height:8rem;
+      width:17rem;   
+      margin:1rem;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+      overflow: hidden;
+      border-radius: 1rem;
+      
+    }
+    
+    .video-conteudo .video video{
+      height:8rem;
+      width:19rem; 
+      object-fit: cover;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      
+    }
+    
+    .video-conteudo .video video:hover{
+      transition: .2s linear;
+      transform: scale(1.3);
+    }
+    
+    .video-conteudo .video .active{
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      height: auto;
+      width: 80%;
+      box-shadow: 0 0 0 100vh rgba(0,0,0,.7);
+      z-index: 1;
+    }
+    
+    .video-conteudo .video .active:hover{
+      transition: none;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    
+    /*-------Localização mapa---------------------------*/
+    
+    #Banner-Onde{
+      margin-top: 2%;
+    }
+  
+    .mapaa iframe {
+      align-items: center;
+      justify-content:center;
+      display: flex;
+      width: 100%;
+      height: 500px;
+    }
+  
+    #TituloOnde {
+      font-size: 19px;
+      line-height: 99%;
+      margin-top: 3%;
+    }
+  
+    /* ----------Parte Lista Usuário------------*/
+  
+   .homet img{
+    margin-top: 2%;
+    margin-left: -3%;
+    width: 105%;
+    height: auto;
+  }
+  
+  #Cad_N_Usuario a{
+   justify-content: center;
+   padding: 1% 10%;
+  }
+  
+  #Title_Lista_Usuario h3{
+     font-size: 25px;
+     margin: -5% 0 5% 0;
+  }
+  
+  #tabela_Lista_Usuario{
+   margin: 0 0 0 0;
+    
+  }
+  
+  #tabela_Lista_Usuario tr,
+  #tabela_Lista_Usuario td{
+   font-size: 4px;
+   text-align: center;
+   margin-right: -4px;
+  }
+  
+  #btn_Lista_Usuario_Editar{
+   padding: 1px 3px;
+   font-size: 5px;
+   
+   margin: 2% 15% 0 -60%;
+  }
+  
+  #btn_Lista_Usuario_Deletar{
+   padding: 1px 3px;
+   font-size: 5px;
+   margin: 0 -50% 0 0;
+  }
+  
+  /* ----------Parte Cadastrar Usuário------------*/
+  
+  #title_cad_N_Usuario h3{
+    font-size: 30px;
+  }
+  
+  #btn_Cad_N_Usuario_Cadastrar input{
+   padding: 10px 80px;
+   margin-left: 13%;
+  }
+  
+  #btn_Cad_N_Usuario_Limpar input{
+   padding: 10px 86px;
+   margin-left: 13%;
+  }
+  
+  #btn_Cad_N_Usuario_Cancelar a{
+   padding: 10px 81px;
+   margin-left: 13%;
+  }
+  
+  /* ----------Parte Editar Usuário------------*/
+  
+  #title_Editar_Cad h3{
+   font-size: 30px;
+  }
+  
+  #Tipo_Conta{
+   font-size: 10px;
+   text-align: center;
+  }
+  
+  #btn_Editar_Cad input{
+   padding: 10px 80px;
+   margin-left: 13%;
+  }
+  
+  #btn_Cancel_Edit_Cad a{
+   padding: 10px 81px;
+   margin-left: 13%;
+  }
+  
+  /* ----------Parte Listagem Produto------------*/
+  
+  .homet img{
+   margin-top: 2%;
+   margin-left: -3%;
+   width: 105%;
+   height: auto;
+  }
+  
+  #Cad_N_Produto a{
+  justify-content: center;
+  padding: 1% 10%;
+  }
+  
+  #Title_Lista_Produto h3{
+    font-size: 20px;
+    margin: -10% 0 5% 0;
+  }
+  
+  #tabela_Lista_Produto{
+  margin: 0 0 0 0;
+   
+  }
+  
+  #tabela_Lista_Produto tr,
+  #tabela_Lista_Produto td{
+  font-size: 6px;
+  text-align: center;
+  margin-right: -4px;
+  }
+  
+  #btn_Lista_Produto_Editar{
+  padding: 1px 3px;
+  font-size: 5px;
+  
+  margin: 2% 15% 0 -60%;
+  }
+  
+  #btn_Lista_Produto_Deletar{
+  padding: 1px 3px;
+  font-size: 5px;
+  margin: 0 -50% 0 0;
+  }
+  
+  /* ----------Parte Cadastro Produto------------*/
+  
+  #title_Cad_Produto h3{
+   font-size: 30px;
+  }
+  
+  #btn_Cad_N_Produto_Cadastrar input{
+  padding: 10px 80px;
+  margin-left: 13%;
+  }
+  
+  #btn_Cad_N_Produto_Limpar input{
+  padding: 10px 86px;
+  margin-left: 13%;
+  }
+  
+  #btn_Cad_N_Produto_Cancelar a{
+  padding: 10px 81px;
+  margin-left: 13%;
+  }
+  
+  /* ----------Parte Editar Produto------------*/
+  
+  #title_edit_Produto h3{
+   font-size: 33px;
+  }
+  
+  #btn_Editar_edit input{
+   padding: 10px 80px;
+   margin-left: 13%;
+  }
+  
+  #btn_Cancel_Edit_edit a{
+   padding: 10px 81px;
+   margin-left: 13%;
+  }
+  
+  /* ----------Parte Mensagem------------*/
+  
+  #menssagem h3{
+   font-size: 25px;
+  }
+  
+  #tabela_Lista_Menssagem {
+   margin: 0 0 0 -8%;
+  }
+  
+  #tabela_Lista_Menssagem tr,
+  #tabela_Lista_Menssagem td{
+  font-size: 5px;
+  max-width: 29ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+  }
+  
+  #div2 {
+   white-space: nowrap; 
+   width: 12em; 
+   overflow: hidden;
+   text-overflow: ellipsis; 
+   
+  }
+  
+  #btn_Lista_Menssagem_Deletar{
+   margin-left: -5px; 
+  }
+  
+  #btn_Lista_Menssagem_Deletar a{
+  padding: 1px 3px;
+  font-size: 5px;
+  
+  
+  }
+    
+    /* Sticky footer styles
+    -------------------------------------------------- */
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+    
+    body {
+      /* Margin bottom by footer height */
+      margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    text-align: center;
+    font-size: 14px;
+  }
+      
+      
+      } 
+      
+/*medium devices (smart, 400px and up)*/
+@media (min-width:400px)  { 
+  
+  /*-------Parte Index----------*/
+    
+    #banner-topo img{
+       position:relative;
+       width: 100%;
+       margin: 5% 0 -7% 0;
+      }
+    
+      #ProDestaques {
+        font-size: 22px;
+        padding: 3%;
+      }   
+    
+    .titulo2 {
+      font-size: 25px;
+      line-height: 50px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    
+    .vermelho {
+      color: #ff0000;
+    }
+    
+    .container .descricao {
+      margin: auto;
+    }
+  
+    #quem_somos p{
+      line-height: 1.2;
+      font-size: 22px;
+      margin: 0 0 -1% 0;
+    }
+  
+    #Title_Historia #TXT_Historia{
+      margin-top: 2%;
+      margin-left: -5%;
+    }
+  
+    #Title_Historia #TXT_Sobre {
+      margin: 0 0 -20% 0;
+    }
+    
+    /* ----------Produtos/Catalago------------*/
+    
+    .content-table {
+      border-collapse: collapse;
+      margin: -5% 0 2% -6%;
+      font-size: 0.9em;
+      min-width: 100%;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+  
+    .content-table input{
+      width: 40px;
+      height: 30px;
+      padding-left: 10px;
+      font-size: 10px;
+      margin-right: 10px;
+      border: 1px solid #000000;
+    }
+    
+    .content-table thead tr {
+      background-color: #53A801;
+      color: #ffffff;
+      text-align: left;
+      font-weight: bold;
+    }
+    
+    .content-table thead tr td{
+      letter-spacing: 1px;
+      color: rgb(0, 0, 0);
+      padding: 8px;
+    }
+    
+    .content-table tfoot tr td {
+      background-color: #b4f17a;
+      color: #000000;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    .content-table th,
+    .content-table td {
+      padding: 12px 15px;
+      font-size: 5px;
+      letter-spacing: 1px;
+      color: rgb(0, 0, 0); 
+    }
+    
+    .content-table tfoot tr td{
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: rgb(0, 0, 0);
+      padding: 8px;
+    }
+    
+    .content-table tfoot tr:last-of-type {
+      border-bottom: 2px solid #53A801;
+    }
+    
+    #btn-index{
+      width: 100%;
+      height: 10%;
+      font-size: 7px;
+      
+    }
+    
+    /*-------Missão, Visão e Valores----------*/
+    
+    .avaliacoes {
+      padding-top: 100px;
+    }
+    
+    .avaliacoes .col-3 {
+      background: #afafad2a;
+      text-align: justify;
+      padding: 40px 20px;
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.5s;
+      
+    }
+    
+    .avaliacoes .col-3:hover {
+      transform: translateY(-10px);
+    }
+    
+    .small-container {
+      max-width: 1080px;
+      margin: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .col-3 {
+      flex-basis: 30%;
+      min-width: 250px;
+      margin-bottom: 30px;
+      margin: 3% 0 3% 0.01%;
+    }
+    
+    .col-3 p {
+      font-size: 15px;
+      margin: 12px 0;
+      color: black;
+    }
+    
+    .laranja {
+      color: #ff0000;
+      font-size: 25px;
+    }
+    
+    /* ----------Parte do formulario Contato------------*/
+    
+    .telacontato * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    #Login_Title h3{
+      font-size: 50px;
+    }
+  
+    #Banner-Contato img{
+      margin-top: 2%;
+    }
+  
+    #contato h1 {
+      font-size: 20px;
+    }
+    
+    .telacontato {
+      background: #000000;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      margin-top: 5%;
+    }
+    
+    .telacontato h1,
+    .telacontato h2 {
+      font-size: 3rem;
+      color: rgb(255, 255, 255);
+      margin-bottom: 2rem;
+      text-align: center;
+      line-height: 1.2;
+    }
+    
+    .telacontato h1::before {
+      content: "📧";
+      display: block;
+    }
+    
+    .telacontato h2::before {
+      content: "🐅";
+      display: block;
+    }
+    
+    .telacontato form {
+      width: 100%;
+      max-width: 32rem;
+      font-size: 1.125rem;
+    }
+    
+    .telacontato form label,
+    .telacontato form input,
+    .telacontato form textarea,
+    .telacontato form button {
+      display: block;
+      width: 100%;
+    }
+    
+    .telacontato form label {
+      color: rgb(255, 255, 255);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    
+    .telacontato form input,
+    .telacontato form textarea {
+      font: inherit;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      transition: border-color, box-shadow 0.2s;
+    }
+    
+    .telacontato form textarea {
+      min-height: 13rem;
+      resize: vertical;
+    }
+    
+    .telacontato form input:hover,
+    .telacontato form input:focus,
+    .telacontato form textarea:hover,
+    .telacontato form textarea:focus {
+      outline: none;
+      border-color: rgb(255, 0, 0);
+      box-shadow: 0 0 0 3px #ff4d4d;
+    }
+    
+    .telacontato form button {
+      display: block;
+      padding: 1rem;
+      background: #ff0000;
+      color: rgb(255, 255, 255);
+      font: inherit;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    
+    .telacontato form button:hover,
+    .telacontato form button:focus {
+      outline: none;
+      background: rgb(255, 0, 0);
+    }
+  
+    #btn_entrar_login input{
+      padding: 10px 90px;
+      margin: 0 0 0 12%;
+      display: flex;
+    }
+  
+    #btn_cancelar_login a{
+      padding: 10px 82px;
+      margin-left: 12%;
+    }
+    
+    /* ----------Parte receitas------------*/
+  
+    #banner-receitas img{
+      width: 100%;
+      margin-top: 2%;
+    }
+    
+    .video-conteudo{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-left: 0%;
+    }
+    
+    .card .video{
+      height:8rem;
+      width:19rem;
+      margin:1rem 0 0 0;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+      overflow: hidden;
+      border-radius: 1rem;
+  
+    }
+    
+    div .card{
+      margin: 2% 0 0 0;
+      text-align:center;
+    }
+    
+    .descricao{
+      margin: 10px auto 10px auto;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top:0px;
+      margin-bottom: auto;
+     
+    }
+  
+    .card span h4{
+      font-size: 20px;
+    }
+    
+    .video-conteudo .video{
+      height:8rem;
+      width:19rem;   
+      margin:1rem;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+      overflow: hidden;
+      border-radius: 1rem;
+      
+    }
+    
+    .video-conteudo .video video{
+      height:8rem;
+      width:19rem; 
+      object-fit: cover;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      
+    }
+    
+    .video-conteudo .video video:hover{
+      transition: .2s linear;
+      transform: scale(1.3);
+    }
+    
+    .video-conteudo .video .active{
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      height: auto;
+      width: 80%;
+      box-shadow: 0 0 0 100vh rgba(0,0,0,.7);
+      z-index: 1;
+    }
+    
+    .video-conteudo .video .active:hover{
+      transition: none;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    
+    /*-------Localização mapa---------------------------*/
+    
+    #Banner-Onde{
+      margin-top: 2%;
+    }
+  
+    .mapaa iframe {
+      align-items: center;
+      justify-content:center;
+      display: flex;
+      width: 100%;
+      height: 500px;
+    }
+  
+    #TituloOnde {
+      font-size: 19px;
+      line-height: 99%;
+      margin-top: 3%;
+    }
+  
+    /* ----------Parte Lista Usuário------------*/
+  
+   .homet img{
+    margin-top: 2%;
+    margin-left: -3%;
+    width: 105%;
+    height: auto;
+  }
+  
+  #Cad_N_Usuario a{
+   justify-content: center;
+   padding: 1% 10%;
+  }
+  
+  #Title_Lista_Usuario h3{
+     font-size: 25px;
+     margin: -5% 0 5% 0;
+  }
+  
+  #tabela_Lista_Usuario{
+   margin: 0 0 0 0;
+    
+  }
+  
+  #tabela_Lista_Usuario tr,
+  #tabela_Lista_Usuario td{
+   font-size: 4px;
+   text-align: center;
+   margin-right: -4px;
+  }
+  
+  #btn_Lista_Usuario_Editar{
+   padding: 1px 3px;
+   font-size: 5px;
+   
+   margin: 2% 15% 0 -60%;
+  }
+  
+  #btn_Lista_Usuario_Deletar{
+   padding: 1px 3px;
+   font-size: 5px;
+   margin: 0 -50% 0 0;
+  }
+  
+  /* ----------Parte Cadastrar Usuário------------*/
+  
+  #title_cad_N_Usuario h3{
+    font-size: 25px;
+  }
+  
+  #btn_Cad_N_Usuario_Cadastrar input{
+   padding: 10px 80px;
+   margin-left: 10%;
+  }
+  
+  #btn_Cad_N_Usuario_Limpar input{
+   padding: 10px 86px;
+   margin-left: 10%;
+  }
+  
+  #btn_Cad_N_Usuario_Cancelar a{
+   padding: 10px 81px;
+   margin-left: 10%;
+  }
+  
+  /* ----------Parte Editar Usuário------------*/
+  
+  #title_Editar_Cad h3{
+   font-size: 25px;
+  }
+  
+  #Tipo_Conta{
+   font-size: 10px;
+   text-align: center;
+  }
+  
+  #btn_Editar_Cad input{
+   padding: 10px 80px;
+   margin-left: 15%;
+  }
+  
+  #btn_Cancel_Edit_Cad a{
+   padding: 10px 81px;
+   margin-left: 15%;
+  }
+  
+  /* ----------Parte Listagem Produto------------*/
+  
+  .homet img{
+   margin-top: 2%;
+   margin-left: -3%;
+   width: 105%;
+   height: auto;
+  }
+  
+  #Cad_N_Produto a{
+  justify-content: center;
+  padding: 1% 10%;
+  }
+  
+  #Title_Lista_Produto h3{
+    font-size: 20px;
+    margin: -10% 0 5% 0;
+  }
+  
+  #tabela_Lista_Produto{
+  margin: 0 0 0 0;
+   
+  }
+  
+  #tabela_Lista_Produto tr,
+  #tabela_Lista_Produto td{
+  font-size: 6px;
+  text-align: center;
+  margin-right: -4px;
+  }
+  
+  #btn_Lista_Produto_Editar{
+  padding: 1px 3px;
+  font-size: 5px;
+  
+  margin: 2% 15% 0 -60%;
+  }
+  
+  #btn_Lista_Produto_Deletar{
+  padding: 1px 3px;
+  font-size: 5px;
+  margin: 0 -50% 0 0;
+  }
+  
+  /* ----------Parte Cadastro Produto------------*/
+  
+  #title_Cad_Produto h3{
+   font-size: 25px;
+  }
+  
+  #btn_Cad_N_Produto_Cadastrar input{
+  padding: 10px 80px;
+  margin-left: 10%;
+  }
+  
+  #btn_Cad_N_Produto_Limpar input{
+  padding: 10px 86px;
+  margin-left: 10%;
+  }
+  
+  #btn_Cad_N_Produto_Cancelar a{
+  padding: 10px 81px;
+  margin-left: 10%;
+  }
+  
+  /* ----------Parte Editar Produto------------*/
+  
+  #title_edit_Produto h3{
+   font-size: 25px;
+  }
+  
+  #btn_Editar_edit input{
+   padding: 10px 80px;
+   margin-left: 10%;
+  }
+  
+  #btn_Cancel_Edit_edit a{
+   padding: 10px 81px;
+   margin-left: 10%;
+  }
+  
+  /* ----------Parte Mensagem------------*/
+  
+  #menssagem h3{
+   font-size: 25px;
+  }
+  
+  #tabela_Lista_Menssagem {
+   margin: 0 0 0 -8%;
+  }
+  
+  #tabela_Lista_Menssagem tr,
+  #tabela_Lista_Menssagem td{
+  font-size: 5.5px;
+  max-width: 29ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+  }
+  
+  #div2 {
+   white-space: nowrap; 
+   width: 12em; 
+   overflow: hidden;
+   text-overflow: ellipsis; 
+   
+  }
+  
+  #btn_Lista_Menssagem_Deletar{
+   margin-left: -5px; 
+  }
+  
+  #btn_Lista_Menssagem_Deletar a{
+  padding: 1px 3px;
+  font-size: 5.5px;
+  
+  
+  }
+    
+    /* Sticky footer styles
+    -------------------------------------------------- */
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+    
+    body {
+      /* Margin bottom by footer height */
+      margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    text-align: center;
+    font-size: 14px;
+  }
+      
+      
+      }       
+
+    /*medium devices (smart, 410px and up)*/
+@media (min-width:410px)  { 
+  
+  /*-------Parte Index----------*/
+    
+    #banner-topo img{
+       position:relative;
+       width: 100%;
+       margin: 5% 0 -7% 0;
+      }
+    
+      #ProDestaques {
+        font-size: 22px;
+        display: flex;
+        text-align: center;
+      }   
+    
+    .titulo2 {
+      font-size: 25px;
+      line-height: 50px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    
+    .vermelho {
+      color: #ff0000;
+    }
+    
+    .container .descricao {
+      margin: auto;
+    }
+  
+    #quem_somos p{
+      line-height: 1.2;
+      font-size: 22px;
+      margin: 0 0 -1% 0;
+    }
+  
+    #Title_Historia #TXT_Historia{
+      margin-top: 2%;
+      margin-left: -5%;
+    }
+  
+    #Title_Historia #TXT_Sobre {
+      margin: 0 0 -20% 0;
+    }
+    
+    /* ----------Produtos/Catalago------------*/
+    
+    .content-table {
+      border-collapse: collapse;
+      margin: -5% 0 2% -10%;
+      font-size: 0.9em;
+      min-width: 100%;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+  
+    .content-table input{
+      width: 40px;
+      height: 30px;
+      padding-left: 10px;
+      font-size: 10px;
+      margin-right: 10px;
+      border: 1px solid #000000;
+    }
+    
+    .content-table thead tr {
+      background-color: #53A801;
+      color: #ffffff;
+      text-align: left;
+      font-weight: bold;
+    }
+    
+    .content-table thead tr td{
+      letter-spacing: 1px;
+      color: rgb(0, 0, 0);
+      padding: 8px;
+    }
+    
+    .content-table tfoot tr td {
+      background-color: #b4f17a;
+      color: #000000;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    .content-table th,
+    .content-table td {
+      padding: 12px 15px;
+      font-size: 5px;
+      letter-spacing: 1px;
+      color: rgb(0, 0, 0); 
+    }
+    
+    .content-table tfoot tr td{
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: rgb(0, 0, 0);
+      padding: 8px;
+    }
+    
+    .content-table tfoot tr:last-of-type {
+      border-bottom: 2px solid #53A801;
+    }
+    
+    #btn-index{
+      width: 100%;
+      height: 10%;
+      font-size: 7px;
+      
+    }
+    
+    /*-------Missão, Visão e Valores----------*/
+    
+    .avaliacoes {
+      padding-top: 100px;
+    }
+    
+    .avaliacoes .col-3 {
+      background: #afafad2a;
+      text-align: justify;
+      padding: 40px 20px;
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.5s;
+      
+    }
+    
+    .avaliacoes .col-3:hover {
+      transform: translateY(-10px);
+    }
+    
+    .small-container {
+      max-width: 1080px;
+      margin: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .col-3 {
+      flex-basis: 30%;
+      min-width: 250px;
+      margin-bottom: 30px;
+      margin: 3% 0 3% 0.01%;
+    }
+    
+    .col-3 p {
+      font-size: 15px;
+      margin: 12px 0;
+      color: black;
+    }
+    
+    .laranja {
+      color: #ff0000;
+      font-size: 25px;
+    }
+    
+    /* ----------Parte do formulario Contato------------*/
+    
+    .telacontato * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    #Login_Title h3{
+      font-size: 50px;
+    }
+  
+    #Banner-Contato img{
+      margin-top: 2%;
+    }
+  
+    #contato h1 {
+      font-size: 25px;
+    }
+    
+    .telacontato {
+      background: #000000;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      margin-top: 5%;
+    }
+    
+    .telacontato h1,
+    .telacontato h2 {
+      font-size: 3rem;
+      color: rgb(255, 255, 255);
+      margin-bottom: 2rem;
+      text-align: center;
+      line-height: 1.2;
+    }
+    
+    .telacontato h1::before {
+      content: "📧";
+      display: block;
+    }
+    
+    .telacontato h2::before {
+      content: "🐅";
+      display: block;
+    }
+    
+    .telacontato form {
+      width: 100%;
+      max-width: 32rem;
+      font-size: 1.125rem;
+    }
+    
+    .telacontato form label,
+    .telacontato form input,
+    .telacontato form textarea,
+    .telacontato form button {
+      display: block;
+      width: 100%;
+    }
+    
+    .telacontato form label {
+      color: rgb(255, 255, 255);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    
+    .telacontato form input,
+    .telacontato form textarea {
+      font: inherit;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      transition: border-color, box-shadow 0.2s;
+    }
+    
+    .telacontato form textarea {
+      min-height: 13rem;
+      resize: vertical;
+    }
+    
+    .telacontato form input:hover,
+    .telacontato form input:focus,
+    .telacontato form textarea:hover,
+    .telacontato form textarea:focus {
+      outline: none;
+      border-color: rgb(255, 0, 0);
+      box-shadow: 0 0 0 3px #ff4d4d;
+    }
+    
+    .telacontato form button {
+      display: block;
+      padding: 1rem;
+      background: #ff0000;
+      color: rgb(255, 255, 255);
+      font: inherit;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    
+    .telacontato form button:hover,
+    .telacontato form button:focus {
+      outline: none;
+      background: rgb(255, 0, 0);
+    }
+
+    /* ----------Parte Login------------*/
+  
+    #btn_entrar_login input{
+      padding: 10px 50px;
+      margin: 0 0 0 12%;
+      display: flex;
+    }
+  
+    #btn_cancelar_login a{
+      padding: 10px 42px;
+      margin-left: 12%;
+    }
+    
+    /* ----------Parte receitas------------*/
+  
+    #banner-receitas img{
+      width: 100%;
+      margin-top: 2%;
+    }
+    
+    .video-conteudo{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-left: 0%;
+    }
+    
+    .card .video{
+      height:8rem;
+      width:19rem;
+      margin:1rem 0 0 0;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+      overflow: hidden;
+      border-radius: 1rem;
+  
+    }
+    
+    div .card{
+      margin: 2% 0 0 0;
+      text-align:center;
+    }
+    
+    .descricao{
+      margin: 10px auto 10px auto;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top:0px;
+      margin-bottom: auto;
+     
+    }
+  
+    .card span h4{
+      font-size: 20px;
+    }
+    
+    .video-conteudo .video{
+      height:8rem;
+      width:19rem;   
+      margin:1rem;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+      overflow: hidden;
+      border-radius: 1rem;
+      
+    }
+    
+    .video-conteudo .video video{
+      height:8rem;
+      width:19rem; 
+      object-fit: cover;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      
+    }
+    
+    .video-conteudo .video video:hover{
+      transition: .2s linear;
+      transform: scale(1.3);
+    }
+    
+    .video-conteudo .video .active{
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      height: auto;
+      width: 80%;
+      box-shadow: 0 0 0 100vh rgba(0,0,0,.7);
+      z-index: 1;
+    }
+    
+    .video-conteudo .video .active:hover{
+      transition: none;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    
+    /*-------Localização mapa---------------------------*/
+    
+    #Banner-Onde{
+      margin-top: 2%;
+    }
+  
+    .mapaa iframe {
+      align-items: center;
+      justify-content:center;
+      display: flex;
+      width: 100%;
+      height: 500px;
+    }
+  
+    #TituloOnde {
+      font-size: 19px;
+      line-height: 99%;
+      margin-top: 3%;
+    }
+  
+    /* ----------Parte Lista Usuário------------*/
+  
+   .homet img{
+    margin-top: 2%;
+    margin-left: -3%;
+    width: 105%;
+    height: auto;
+  }
+  
+  #Cad_N_Usuario a{
+   justify-content: center;
+   padding: 1% 10%;
+  }
+  
+  #Title_Lista_Usuario h3{
+     font-size: 25px;
+     margin: -5% 0 5% 0;
+  }
+  
+  #tabela_Lista_Usuario{
+   margin: 0 0 0 0;
+    
+  }
+  
+  #tabela_Lista_Usuario tr,
+  #tabela_Lista_Usuario td{
+   font-size: 4px;
+   text-align: center;
+   margin-right: -4px;
+  }
+  
+  #btn_Lista_Usuario_Editar{
+   padding: 1px 3px;
+   font-size: 5px;
+   
+   margin: 2% 15% 0 -60%;
+  }
+  
+  #btn_Lista_Usuario_Deletar{
+   padding: 1px 3px;
+   font-size: 5px;
+   margin: 0 -50% 0 0;
+  }
+  
+  /* ----------Parte Cadastrar Usuário------------*/
+  
+  #title_cad_N_Usuario h3{
+    font-size: 33px;
+  }
+  
+  #btn_Cad_N_Usuario_Cadastrar input{
+   padding: 10px 80px;
+   margin-left: 15%;
+  }
+  
+  #btn_Cad_N_Usuario_Limpar input{
+   padding: 10px 86px;
+   margin-left: 15%;
+  }
+  
+  #btn_Cad_N_Usuario_Cancelar a{
+   padding: 10px 81px;
+   margin-left: 15%;
+  }
+  
+  /* ----------Parte Editar Usuário------------*/
+  
+  #title_Editar_Cad h3{
+   font-size: 33px;
+  }
+  
+  #Tipo_Conta{
+   font-size: 10px;
+   text-align: center;
+  }
+  
+  #btn_Editar_Cad input{
+   padding: 10px 80px;
+   margin-left: 15%;
+  }
+  
+  #btn_Cancel_Edit_Cad a{
+   padding: 10px 81px;
+   margin-left: 15%;
+  }
+  
+  /* ----------Parte Listagem Produto------------*/
+  
+  .homet img{
+   margin-top: 2%;
+   margin-left: -3%;
+   width: 105%;
+   height: auto;
+  }
+  
+  #Cad_N_Produto a{
+  justify-content: center;
+  padding: 1% 10%;
+  }
+  
+  #Title_Lista_Produto h3{
+    font-size: 20px;
+    margin: -10% 0 5% 0;
+  }
+  
+  #tabela_Lista_Produto{
+  margin: 0 0 0 0;
+   
+  }
+  
+  #tabela_Lista_Produto tr,
+  #tabela_Lista_Produto td{
+  font-size: 6px;
+  text-align: center;
+  margin-right: -4px;
+  }
+  
+  #btn_Lista_Produto_Editar{
+  padding: 1px 3px;
+  font-size: 5px;
+  
+  margin: 2% 15% 0 -60%;
+  }
+  
+  #btn_Lista_Produto_Deletar{
+  padding: 1px 3px;
+  font-size: 5px;
+  margin: 0 -50% 0 0;
+  }
+  
+  /* ----------Parte Cadastro Produto------------*/
+  
+  #title_Cad_Produto h3{
+   font-size: 33px;
+  }
+  
+  #btn_Cad_N_Produto_Cadastrar input{
+  padding: 10px 80px;
+  margin-left: 15%;
+  }
+  
+  #btn_Cad_N_Produto_Limpar input{
+  padding: 10px 86px;
+  margin-left: 15%;
+  }
+  
+  #btn_Cad_N_Produto_Cancelar a{
+  padding: 10px 81px;
+  margin-left: 15%;
+  }
+  
+  /* ----------Parte Editar Produto------------*/
+  
+  #title_edit_Produto h3{
+   font-size: 33px;
+  }
+  
+  #btn_Editar_edit input{
+   padding: 10px 80px;
+   margin-left: 15%;
+  }
+  
+  #btn_Cancel_Edit_edit a{
+   padding: 10px 81px;
+   margin-left: 15%;
+  }
+  
+  /* ----------Parte Mensagem------------*/
+  
+  #menssagem h3{
+   font-size: 33px;
+  }
+  
+  #tabela_Lista_Menssagem {
+  margin: 0 0 0 -7%;
+  }
+  
+  #tabela_Lista_Menssagem tr,
+  #tabela_Lista_Menssagem td{
+  font-size: 5.5px;
+  max-width: 29ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+  }
+  
+  #div2 {
+   white-space: nowrap; 
+   width: 12em; 
+   overflow: hidden;
+   text-overflow: ellipsis; 
+   
+  }
+  
+  #btn_Lista_Menssagem_Deletar{
+   margin-left: -5px; 
+  }
+  
+  #btn_Lista_Menssagem_Deletar a{
+  padding: 1px 3px;
+  font-size: 5.5px;
+  
+  
+  }
+    
+    /* Sticky footer styles
+    -------------------------------------------------- */
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+    
+    body {
+      /* Margin bottom by footer height */
+      margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    text-align: center;
+    font-size: 14px;
+  }
+      
+      
+      }  
+
+/*medium devices (smart, 540px and up)*/
+@media (min-width:540px)  { 
+  
+  /*-------Parte Index----------*/
+    
+    #banner-topo img{
+       position:relative;
+       width: 100%;
+       margin: 5% 0 -7% 0;
+      }
+    
+      #ProDestaques {
+        font-size: 22px;
+        display: flex;
+        text-align: center;
+        margin-left: 10%;
+      }   
+    
+    .titulo2 {
+      font-size: 25px;
+      line-height: 50px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    
+    .vermelho {
+      color: #ff0000;
+    }
+    
+    .container .descricao {
+      margin: auto;
+    }
+  
+    #quem_somos p{
+      line-height: 1.2;
+      font-size: 22px;
+      margin: 0 0 -1% 0;
+    }
+  
+    #Title_Historia #TXT_Historia{
+      margin-top: 2%;
+      margin-left: 0%;
+    }
+  
+    #Title_Historia #TXT_Sobre {
+      margin: 0 0 -20% 0;
+    }
+    
+    /* ----------Produtos/Catalago------------*/
+
+    .content-table {
+      border-collapse: collapse;
+      margin: -5% 0 2% -6%;
+      font-size: 0.9em;
+      min-width: 100%;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+  
+    .content-table input{
+      width: 40px;
+      height: 30px;
+      padding-left: 10px;
+      font-size: 10px;
+      margin-right: 10px;
+      border: 1px solid #000000;
+    }
+    
+    .content-table thead tr {
+      background-color: #53A801;
+      color: #ffffff;
+      text-align: left;
+      font-weight: bold;
+    }
+    
+    .content-table thead tr td{
+      letter-spacing: 1px;
+      color: rgb(0, 0, 0);
+      padding: 8px;
+    }
+    
+    .content-table tfoot tr td {
+      background-color: #b4f17a;
+      color: #000000;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    .content-table th,
+    .content-table td {
+      padding: 12px 15px;
+      font-size: 5px;
+      letter-spacing: 1px;
+      color: rgb(0, 0, 0); 
+    }
+    
+    .content-table tfoot tr td{
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: rgb(0, 0, 0);
+      padding: 8px;
+    }
+    
+    .content-table tfoot tr:last-of-type {
+      border-bottom: 2px solid #53A801;
+    }
+    
+    #btn-index{
+      width: 100%;
+      height: 10%;
+      font-size: 7px;
+      
+    }
+    
+    /*-------Missão, Visão e Valores----------*/
+    
+    .avaliacoes {
+      padding-top: 100px;
+    }
+    
+    .avaliacoes .col-3 {
+      background: #afafad2a;
+      text-align: justify;
+      padding: 40px 20px;
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.5s;
+      
+    }
+    
+    .avaliacoes .col-3:hover {
+      transform: translateY(-10px);
+    }
+    
+    .small-container {
+      max-width: 1080px;
+      margin: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .col-3 {
+      flex-basis: 30%;
+      min-width: 250px;
+      margin-bottom: 30px;
+      margin: 3% 0 3% 0.01%;
+    }
+    
+    .col-3 p {
+      font-size: 15px;
+      margin: 12px 0;
+      color: black;
+    }
+    
+    .laranja {
+      color: #ff0000;
+      font-size: 25px;
+    }
+    
+    /* ----------Parte do formulario Contato------------*/
+    
+    .telacontato * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    #Login_Title h3{
+      font-size: 50px;
+    }
+  
+    #Banner-Contato img{
+      margin-top: 2%;
+    }
+  
+    #contato h1 {
+      font-size: 23px;
+    }
+    
+    .telacontato {
+      background: #000000;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      margin-top: 5%;
+    }
+    
+    .telacontato h1,
+    .telacontato h2 {
+      font-size: 3rem;
+      color: rgb(255, 255, 255);
+      margin-bottom: 2rem;
+      text-align: center;
+      line-height: 1.2;
+    }
+    
+    .telacontato h1::before {
+      content: "📧";
+      display: block;
+    }
+    
+    .telacontato h2::before {
+      content: "🐅";
+      display: block;
+    }
+    
+    .telacontato form {
+      width: 100%;
+      max-width: 32rem;
+      font-size: 1.125rem;
+    }
+    
+    .telacontato form label,
+    .telacontato form input,
+    .telacontato form textarea,
+    .telacontato form button {
+      display: block;
+      width: 100%;
+    }
+    
+    .telacontato form label {
+      color: rgb(255, 255, 255);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    
+    .telacontato form input,
+    .telacontato form textarea {
+      font: inherit;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      transition: border-color, box-shadow 0.2s;
+    }
+    
+    .telacontato form textarea {
+      min-height: 13rem;
+      resize: vertical;
+    }
+    
+    .telacontato form input:hover,
+    .telacontato form input:focus,
+    .telacontato form textarea:hover,
+    .telacontato form textarea:focus {
+      outline: none;
+      border-color: rgb(255, 0, 0);
+      box-shadow: 0 0 0 3px #ff4d4d;
+    }
+    
+    .telacontato form button {
+      display: block;
+      padding: 1rem;
+      background: #ff0000;
+      color: rgb(255, 255, 255);
+      font: inherit;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    
+    .telacontato form button:hover,
+    .telacontato form button:focus {
+      outline: none;
+      background: rgb(255, 0, 0);
+    }
+  
+    #btn_entrar_login input{
+      padding: 10px 90px;
+      margin: 0 0 0 10%;
+      display: flex;
+    }
+  
+    #btn_cancelar_login a{
+      padding: 10px 82px;
+      margin-left: 10%;
+    }
+    
+    /* ----------Parte receitas------------*/
+  
+    #banner-receitas img{
+      width: 100%;
+      margin-top: 2%;
+    }
+    
+    .video-conteudo{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-left: 0%;
+    }
+    
+    .card .video{
+      height:10rem;
+      width:29rem;
+      margin:1rem 0 0 0;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+      overflow: hidden;
+      border-radius: 1rem;
+  
+    }
+    
+    div .card{
+      margin: 2% 0 0 0;
+      text-align:center;
+    }
+    
+    .descricao{
+      margin: 10px auto 10px auto;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top:0px;
+      margin-bottom: auto;
+     
+    }
+  
+    .card span h4{
+      font-size: 20px;
+    }
+    
+    .video-conteudo .video{
+      height:10rem;
+      width:29rem;   
+      margin:1rem;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+      overflow: hidden;
+      border-radius: 1rem;
+      
+    }
+    
+    .video-conteudo .video video{
+      height:10rem;
+      width:29rem; 
+      object-fit: cover;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      
+    }
+    
+    .video-conteudo .video video:hover{
+      transition: .2s linear;
+      transform: scale(1.3);
+    }
+    
+    .video-conteudo .video .active{
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      height: auto;
+      width: 80%;
+      box-shadow: 0 0 0 100vh rgba(0,0,0,.7);
+      z-index: 1;
+    }
+    
+    .video-conteudo .video .active:hover{
+      transition: none;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    
+    /*-------Localização mapa---------------------------*/
+    
+    #Banner-Onde{
+      margin-top: 2%;
+    }
+  
+    .mapaa iframe {
+      align-items: center;
+      justify-content:center;
+      display: flex;
+      width: 100%;
+      height: 500px;
+    }
+  
+    #TituloOnde {
+      font-size: 19px;
+      line-height: 99%;
+      margin-top: 3%;
+    }
+  
+    /* ----------Parte Lista Usuário------------*/
+  
+   .homet img{
+    margin-top: 2%;
+    margin-left: -3%;
+    width: 105%;
+    height: auto;
+  }
+  
+  #Cad_N_Usuario a{
+   justify-content: center;
+   padding: 1% 10%;
+  }
+  
+  #Title_Lista_Usuario h3{
+     font-size: 25px;
+     margin: -5% 0 5% 0;
+  }
+  
+  #tabela_Lista_Usuario{
+   margin: 0 0 0 0;
+    
+  }
+  
+  #tabela_Lista_Usuario tr,
+  #tabela_Lista_Usuario td{
+   font-size: 4px;
+   text-align: center;
+   margin-right: -4px;
+  }
+  
+  #btn_Lista_Usuario_Editar{
+   padding: 1px 3px;
+   font-size: 5px;
+   
+   margin: 2% 15% 0 -60%;
+  }
+  
+  #btn_Lista_Usuario_Deletar{
+   padding: 1px 3px;
+   font-size: 5px;
+   margin: 0 -50% 0 0;
+  }
+  
+  /* ----------Parte Cadastrar Usuário------------*/
+  
+  #title_cad_N_Usuario h3{
+    font-size: 35px;
+  }
+  
+  #btn_Cad_N_Usuario_Cadastrar input{
+   padding: 10px 150px;
+   margin-left: 10%;
+  }
+  
+  #btn_Cad_N_Usuario_Limpar input{
+   padding: 10px 156px;
+   margin-left: 10%;
+  }
+  
+  #btn_Cad_N_Usuario_Cancelar a{
+   padding: 10px 151px;
+   margin-left: 10%;
+  }
+  
+  /* ----------Parte Editar Usuário------------*/
+  
+  #title_Editar_Cad h3{
+   font-size: 35px;
+  }
+  
+  #Tipo_Conta{
+   font-size: 10px;
+   text-align: center;
+  }
+  
+  #btn_Editar_Cad input{
+   padding: 10px 100px;
+   margin-left: 15%;
+  }
+  
+  #btn_Cancel_Edit_Cad a{
+   padding: 10px 101px;
+   margin-left: 15%;
+  }
+  
+  /* ----------Parte Listagem Produto------------*/
+  
+  .homet img{
+   margin-top: 2%;
+   margin-left: -3%;
+   width: 105%;
+   height: auto;
+  }
+  
+  #Cad_N_Produto a{
+  justify-content: center;
+  padding: 1% 10%;
+  }
+  
+  #Title_Lista_Produto h3{
+    font-size: 20px;
+    margin: -10% 0 5% 0;
+  }
+  
+  #tabela_Lista_Produto{
+  margin: 0 0 0 0;
+   
+  }
+  
+  #tabela_Lista_Produto tr,
+  #tabela_Lista_Produto td{
+  font-size: 6px;
+  text-align: center;
+  margin-right: -4px;
+  }
+  
+  #btn_Lista_Produto_Editar{
+  padding: 1px 3px;
+  font-size: 5px;
+  
+  margin: 2% 15% 0 -60%;
+  }
+  
+  #btn_Lista_Produto_Deletar{
+  padding: 1px 3px;
+  font-size: 5px;
+  margin: 0 -50% 0 0;
+  }
+  
+  /* ----------Parte Cadastro Produto------------*/
+  
+  #title_Cad_Produto h3{
+   font-size: 35px;
+  }
+  
+  #btn_Cad_N_Produto_Cadastrar input{
+  padding: 10px 100px;
+  margin-left: 20%;
+  }
+  
+  #btn_Cad_N_Produto_Limpar input{
+  padding: 10px 106px;
+  margin-left: 20%;
+  }
+  
+  #btn_Cad_N_Produto_Cancelar a{
+  padding: 10px 101px;
+  margin-left: 20%;
+  }
+  
+  /* ----------Parte Editar Produto------------*/
+  
+  #title_edit_Produto h3{
+   font-size: 35px;
+  }
+  
+  #btn_Editar_edit input{
+   padding: 10px 80px;
+   margin-left: 25%;
+  }
+  
+  #btn_Cancel_Edit_edit a{
+   padding: 10px 81px;
+   margin-left: 25%;
+  }
+  
+  /* ----------Parte Mensagem------------*/
+  
+  #menssagem h3{
+   font-size: 35px;
+  }
+  
+  #tabela_Lista_Menssagem {
+   margin: 0 0 0 0;
+  }
+  
+  #tabela_Lista_Menssagem tr,
+  #tabela_Lista_Menssagem td{
+  font-size: 5px;
+  max-width: 29ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+  }
+  
+  #div2 {
+   white-space: nowrap; 
+   width: 12em; 
+   overflow: hidden;
+   text-overflow: ellipsis; 
+   
+  }
+  
+  #btn_Lista_Menssagem_Deletar{
+   margin-left: -15px; 
+  }
+  
+  #btn_Lista_Menssagem_Deletar a{
+  padding: 1px 3px;
+  font-size: 5px;
+  
+  
+  }
+    
+    /* Sticky footer styles
+    -------------------------------------------------- */
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+    
+    body {
+      /* Margin bottom by footer height */
+      margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    text-align: center;
+    font-size: 14px;
+  }
+      
+      
+      }     
+
+/*medium devices (smart, 768px and up)*/
+@media (min-width: 768px)  { 
+  
+/*-------Parte Index----------*/
+  
+#banner-topo img{
+  position: relative;
+  width: 100%;
+  margin: 4% 0 0 0;
+ }
+
+ #ProDestaques {
+   font-size: 35px;
+   margin-top: -7%;
+ }   
+
+.titulo2 {
+ font-size: 25px;
+ line-height: 50px;
+ text-align: center;
+ text-transform: uppercase;
+ font-weight: 700;
+ line-height: 1.2;
+}
+
+#ProdDes p {
+  padding: 5%;
+}
+
+.vermelho {
+ color: #ff0000;
+}
+
+.container .descricao {
+ margin: auto;
+}
+
+#quem_somos p{
+ line-height: 1.2;
+ font-size: 35px;
+ margin: 0 0 -1% 0;
+}
+
+#Title_Historia #TXT_Historia{
+ margin: 2% 0 0 0;
+}
+
+#Title_Historia #TXT_Sobre {
+ margin: 0 0 -10% 0;
+}
+
+/* ----------Produtos/Catalago------------*/
+
+.content-table {
+ border-collapse: collapse;
+ margin: -5% 0 2% -6%;
+ font-size: 0.9em;
+ min-width: 100%;
+ border-radius: 5px 5px 0 0;
+ overflow: hidden;
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table input{
+ width: 40px;
+ height: 30px;
+ padding-left: 10px;
+ font-size: 10px;
+ margin-right: 10px;
+ border: 1px solid #000000;
+}
+
+.content-table thead tr {
+ background-color: #53A801;
+ color: #ffffff;
+ text-align: left;
+ font-weight: bold;
+}
+
+.content-table thead tr td{
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0);
+ padding: 8px;
+}
+
+.content-table tfoot tr td {
+ background-color: #b4f17a;
+ color: #000000;
+ text-align: center;
+ font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+ padding: 12px 15px;
+ font-size: 5px;
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0); 
+}
+
+.content-table tfoot tr td{
+ font-size: 18px;
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0);
+ padding: 8px;
+}
+
+.content-table tfoot tr:last-of-type {
+ border-bottom: 2px solid #53A801;
+}
+
+#btn-index{
+ width: 100%;
+ height: 10%;
+ font-size: 7px;
+ 
+}
+
+/*-------Missão, Visão e Valores----------*/
+
+.avaliacoes {
+ padding-top: 100px;
+}
+
+.avaliacoes .col-3 {
+ background: #afafad2a;
+ text-align: justify;
+ padding: 40px 20px;
+ box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+ cursor: pointer;
+ transition: transform 0.5s;
+ 
+}
+
+.avaliacoes .col-3:hover {
+ transform: translateY(-10px);
+}
+
+.small-container {
+ max-width: 1080px;
+ margin: auto;
+ padding-left: 20px;
+ padding-right: 20px;
+}
+
+.row {
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
+
+.col-3 {
+ flex-basis: 30%;
+ min-width: 250px;
+ margin-bottom: 30px;
+}
+
+.col-3 p {
+ font-size: 15px;
+ margin: 12px 0;
+ color: black;
+}
+
+.laranja {
+ color: #ff0000;
+ font-size: 25px;
+}
+
+/* ----------Parte do formulario Contato------------*/
+
+.telacontato * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+#Login_Title h3{
+ font-size: 50px;
+}
+
+#contato p{
+    font-size: 40px;
+  }
+
+#Banner-Contato img{
+ margin: 2% 0 0 0;
+}
+
+#contato h1 {
+ font-size: 33px;
+}
+
+.telacontato {
+ background: #000000;
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+ padding-right: 1rem;
+ padding-left: 1rem;
+ margin-top: 3%;
+}
+
+.telacontato h1,
+.telacontato h2 {
+ font-size: 6rem;
+ color: rgb(255, 255, 255);
+ margin-bottom: 2rem;
+ text-align: center;
+ line-height: 1.2;
+}
+
+.telacontato h1::before {
+ content: "📧";
+ display: block;
+ 
+}
+
+.telacontato h2::before {
+ content: "🐅";
+ display: block;
+}
+
+.telacontato form {
+ width: 100%;
+ max-width: 32rem;
+ font-size: 1.125rem;
+}
+
+.telacontato form label,
+.telacontato form input,
+.telacontato form textarea,
+.telacontato form button {
+ display: block;
+ width: 100%;
+}
+
+.telacontato form label {
+ color: rgb(255, 255, 255);
+ line-height: 1;
+ margin-bottom: 0.5rem;
+}
+
+.telacontato form input,
+.telacontato form textarea {
+ font: inherit;
+ padding: 0.8rem;
+ margin-bottom: 1rem;
+ border: 1px solid transparent;
+ border-radius: 8px;
+ transition: border-color, box-shadow 0.2s;
+}
+
+.telacontato form textarea {
+ min-height: 13rem;
+ resize: vertical;
+}
+
+.telacontato form input:hover,
+.telacontato form input:focus,
+.telacontato form textarea:hover,
+.telacontato form textarea:focus {
+ outline: none;
+ border-color: rgb(255, 0, 0);
+ box-shadow: 0 0 0 3px #ff4d4d;
+}
+
+.telacontato form button {
+ display: block;
+ padding: 1rem;
+ background: #ff0000;
+ color: rgb(255, 255, 255);
+ font: inherit;
+ text-transform: uppercase;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ transition: 0.2s;
+}
+
+.telacontato form button:hover,
+.telacontato form button:focus {
+ outline: none;
+ background: rgb(255, 0, 0);
+}
+
+ /* ----------Parte Login------------*/
+  
+ #btn_entrar_login input{
+  padding: 10px 50px;
+  margin: 0 0 0 -10%;
+  display: flex;
+}
+
+#btn_cancelar_login a{
+  padding: 10px 42px;
+  margin-left: 10%;
+}
+
+/* ----------Parte receitas------------*/
+
+#banner-receitas img{
+ width: 100%;
+ margin-top: 2%;
+}
+
+.video-conteudo{
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+
+.card .video{
+ height:15rem;
+ width:38rem;   
+ margin:1rem;
+ box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+ overflow: hidden;
+ border-radius: 1rem;
+}
+
+div .card{
+ margin: 2% 0 2% 0;
+ text-align:center;
+}
+
+.descricao{
+ margin: 10px auto 10px auto;
+ margin-left: 5%;
+ margin-right: 5%;
+ margin-top:0px;
+ margin-bottom: auto;
+
+}
+
+.card span h4{
+ font-size: 20px;
+}
+
+.video-conteudo .video{
+ height:15rem;
+ width:38rem;   
+ margin:1rem;
+ box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+ overflow: hidden;
+ border-radius: 1rem;
+}
+
+.video-conteudo .video video{
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+ outline: none;
+ border: none;
+ cursor: pointer;
+}
+
+.video-conteudo .video video:hover{
+ transition: .2s linear;
+ transform: scale(1.3);
+}
+
+.video-conteudo .video .active{
+ position: fixed;
+ top: 50%; left: 50%;
+ transform: translate(-50%, -50%);
+ height: auto;
+ width: 80%;
+ box-shadow: 0 0 0 100vh rgba(0,0,0,.7);
+ z-index: 1;
+}
+
+.video-conteudo .video .active:hover{
+ transition: none;
+ transform: translate(-50%, -50%) scale(1);
+}
+
+/*-------Localização mapa---------------------------*/
+
+#Banner-Onde{
+ margin-top: 2%;
+}
+
+.mapaa iframe {
+ align-items: center;
+ justify-content:center;
+ display: flex;
+ width: 100%;
+ height: 700px;
+}
+
+#TituloOnde {
+ font-size: 19px;
+ line-height: 99%;
+ margin-top: 3%;
+}
+
+/* ----------Parte Lista Usuário------------*/
+
+.homet img{
+margin-top: 2%;
+margin-left: -3%;
+width: 105%;
+height: auto;
+}
+
+#Cad_N_Usuario a{
+justify-content: center;
+padding: 1% 10%;
+}
+
+#Title_Lista_Usuario h3{
+font-size: 25px;
+margin: -2% 0 1% 0;
+}
+
+#tabela_Lista_Usuario{
+margin: 0 0 0 0;
+
+}
+
+#tabela_Lista_Usuario tr,
+#tabela_Lista_Usuario td{
+font-size: 4px;
+text-align: center;
+margin-right: -4px;
+}
+
+#btn_Lista_Usuario_Editar{
+padding: 1px 3px;
+font-size: 5px;
+
+margin: 2% 15% 0 -60%;
+}
+
+#btn_Lista_Usuario_Deletar{
+padding: 1px 3px;
+font-size: 5px;
+margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastrar Usuário------------*/
+
+#title_cad_N_Usuario h3{
+font-size: 50px;
+}
+
+#btn_Cad_N_Usuario_Cadastrar input{
+padding: 10px 200px;
+margin-left: 10%;
+}
+
+#btn_Cad_N_Usuario_Limpar input{
+padding: 10px 206px;
+margin-left: 10%;
+}
+
+#btn_Cad_N_Usuario_Cancelar a{
+padding: 10px 201px;
+margin-left: 10%;
+}
+
+/* ----------Parte Editar Usuário------------*/
+
+#title_Editar_Cad h3{
+font-size: 50px;
+}
+
+#Tipo_Conta{
+font-size: 10px;
+text-align: center;
+}
+
+#btn_Editar_Cad input{
+padding: 10px 100px;
+margin-left: 30%;
+}
+
+#btn_Cancel_Edit_Cad a{
+padding: 10px 101px;
+margin-left: 30%;
+}
+
+/* ----------Parte Listagem Produto------------*/
+
+.homet img{
+margin-top: 2%;
+margin-left: -3%;
+width: 105%;
+height: auto;
+}
+
+#Cad_N_Produto a{
+justify-content: center;
+padding: 1% 10%;
+}
+
+#Title_Lista_Produto h3{
+font-size: 20px;
+margin: -10% 0 5% 0;
+}
+
+#tabela_Lista_Produto{
+margin: 0 0 0 0;
+
+}
+
+#tabela_Lista_Produto tr,
+#tabela_Lista_Produto td{
+font-size: 6px;
+text-align: center;
+margin-right: -4px;
+}
+
+#btn_Lista_Produto_Editar{
+padding: 1px 3px;
+font-size: 5px;
+
+margin: 2% 15% 0 -60%;
+}
+
+#btn_Lista_Produto_Deletar{
+padding: 1px 3px;
+font-size: 5px;
+margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastro Produto------------*/
+
+#title_Cad_Produto h3{
+font-size: 50px;
+}
+
+#btn_Cad_N_Produto_Cadastrar input{
+padding: 10px 150px;
+margin-left: 20%;
+}
+
+#btn_Cad_N_Produto_Limpar input{
+padding: 10px 156px;
+margin-left: 20%;
+}
+
+#btn_Cad_N_Produto_Cancelar a{
+padding: 10px 151px;
+margin-left: 20%;
+}
+
+/* ----------Parte Editar Produto------------*/
+
+#title_edit_Produto h3{
+font-size: 50px;
+}
+
+#btn_Editar_edit input{
+padding: 10px 80px;
+margin-left: 33%;
+}
+
+#btn_Cancel_Edit_edit a{
+padding: 10px 81px;
+margin-left: 33%;
+}
+
+/* ----------Parte Mensagem------------*/
+
+#menssagem h3{
+font-size: 50px;
+}
+
+#tabela_Lista_Menssagem {
+margin: 0 0 0 0;
+}
+
+#tabela_Lista_Menssagem tr,
+#tabela_Lista_Menssagem td{
+font-size: 10px;
+max-width: 29ch;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+}
+
+#div2 {
+white-space: nowrap; 
+width: 12em; 
+overflow: hidden;
+text-overflow: ellipsis; 
+
+}
+
+#btn_Lista_Menssagem_Deletar{
+margin-left: 0; 
+}
+
+#btn_Lista_Menssagem_Deletar a{
+padding: 1px 3px;
+font-size: 10px;
+
+
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+ position: relative;
+ min-height: 100%;
+}
+
+body {
+ /* Margin bottom by footer height */
+ margin-bottom: 60px;
+}
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+white-space: nowrap;
+line-height: 60px; /* Vertically center the text there */
+text-align: center;
+font-size: 14px;
+}
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+
+  /*-------Parte Index----------*/
+  
+#banner-topo img{
+  position: relative;
+  width: 100%;
+  margin: 4% 0 0 0;
+ }
+
+ #ProDestaques {
+   font-size: 35px;
+   margin-top: -7%;
+ }   
+
+.titulo2 {
+ font-size: 25px;
+ line-height: 50px;
+ text-align: center;
+ text-transform: uppercase;
+ font-weight: 700;
+ line-height: 1.2;
+}
+
+#ProdDes p {
+  padding: 5%;
+}
+
+.vermelho {
+ color: #ff0000;
+}
+
+.container .descricao {
+ margin: auto;
+}
+
+#quem_somos p{
+ line-height: 1.2;
+ font-size: 35px;
+ margin: 0 0 -1% 0;
+}
+
+#Title_Historia #TXT_Historia{
+ margin: 2% 0 0 0;
+}
+
+#Title_Historia #TXT_Sobre {
+ margin: 0 0 -10% 0;
+}
+
+/* ----------Produtos/Catalago------------*/
+
+.content-table {
+ border-collapse: collapse;
+ margin: -5% 0 2% 0;
+ font-size: 0.9em;
+ min-width: 100%;
+ border-radius: 5px 5px 0 0;
+ overflow: hidden;
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table input{
+ width: 40px;
+ height: 30px;
+ padding-left: 10px;
+ font-size: 10px;
+ margin-right: 10px;
+ border: 1px solid #000000;
+}
+
+.content-table thead tr {
+ background-color: #53A801;
+ color: #ffffff;
+ text-align: left;
+ font-weight: bold;
+}
+
+.content-table thead tr td{
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0);
+ padding: 8px;
+}
+
+.content-table tfoot tr td {
+ background-color: #b4f17a;
+ color: #000000;
+ text-align: center;
+ font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+ padding: 12px 15px;
+ font-size: 5px;
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0); 
+}
+
+.content-table tfoot tr td{
+ font-size: 18px;
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0);
+ padding: 8px;
+}
+
+.content-table tfoot tr:last-of-type {
+ border-bottom: 2px solid #53A801;
+}
+
+#btn-index{
+ width: 100%;
+ height: 10%;
+ font-size: 7px;
+ 
+}
+
+/*-------Missão, Visão e Valores----------*/
+
+.avaliacoes {
+ padding-top: 100px;
+}
+
+.avaliacoes .col-3 {
+ background: #afafad2a;
+ text-align: justify;
+ padding: 40px 20px;
+ box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+ cursor: pointer;
+ transition: transform 0.5s;
+ 
+}
+
+.avaliacoes .col-3:hover {
+ transform: translateY(-10px);
+}
+
+.small-container {
+ max-width: 1080px;
+ margin: auto;
+ padding-left: 20px;
+ padding-right: 20px;
+}
+
+.row {
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
+
+.col-3 {
+ flex-basis: 30%;
+ min-width: 250px;
+ margin-bottom: 30px;
+}
+
+.col-3 p {
+ font-size: 15px;
+ margin: 12px 0;
+ color: black;
+}
+
+.laranja {
+ color: #ff0000;
+ font-size: 25px;
+}
+
+/* ----------Parte do formulario Contato------------*/
+
+.telacontato * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+#Login_Title h3{
+ font-size: 50px;
+}
+
+#Banner-Contato img{
+ margin-top: 2%;
+}
+
+#contato h1 {
+ font-size: 23px;
+}
+
+.telacontato {
+ background: #000000;
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+ padding-right: 1rem;
+ padding-left: 1rem;
+ margin-top: 5%;
+}
+
+.telacontato h1,
+.telacontato h2 {
+ font-size: 3rem;
+ color: rgb(255, 255, 255);
+ margin-bottom: 2rem;
+ text-align: center;
+ line-height: 1.2;
+}
+
+.telacontato h1::before {
+ content: "📧";
+ display: block;
+}
+
+.telacontato h2::before {
+ content: "🐅";
+ display: block;
+}
+
+.telacontato form {
+ width: 100%;
+ max-width: 32rem;
+ font-size: 1.125rem;
+}
+
+.telacontato form label,
+.telacontato form input,
+.telacontato form textarea,
+.telacontato form button {
+ display: block;
+ width: 100%;
+}
+
+.telacontato form label {
+ color: rgb(255, 255, 255);
+ line-height: 1;
+ margin-bottom: 0.5rem;
+}
+
+.telacontato form input,
+.telacontato form textarea {
+ font: inherit;
+ padding: 0.8rem;
+ margin-bottom: 1rem;
+ border: 1px solid transparent;
+ border-radius: 8px;
+ transition: border-color, box-shadow 0.2s;
+}
+
+.telacontato form textarea {
+ min-height: 13rem;
+ resize: vertical;
+}
+
+.telacontato form input:hover,
+.telacontato form input:focus,
+.telacontato form textarea:hover,
+.telacontato form textarea:focus {
+ outline: none;
+ border-color: rgb(255, 0, 0);
+ box-shadow: 0 0 0 3px #ff4d4d;
+}
+
+.telacontato form button {
+ display: block;
+ padding: 1rem;
+ background: #ff0000;
+ color: rgb(255, 255, 255);
+ font: inherit;
+ text-transform: uppercase;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ transition: 0.2s;
+}
+
+.telacontato form button:hover,
+.telacontato form button:focus {
+ outline: none;
+ background: rgb(255, 0, 0);
+}
+
+.btn_cadastrar .dtn-danger input{
+  padding: 10px 90px;
+ margin: 0 0 0 10%;
+ display: flex;
+}
+
+#btn_entrar_login input{
+ padding: 10px 90px;
+ margin: 0 0 0 10%;
+ display: flex;
+}
+
+#btn_cancelar_login a{
+ padding: 10px 82px;
+ margin-left: 10%;
+}
+
+/* ----------Parte receitas------------*/
+
+#banner-receitas img{
+ width: 100%;
+ margin-top: 2%;
+}
 
 .video-conteudo{
   display: flex;
@@ -338,8 +5456,8 @@ nav a:hover{
 }
 
 .card .video{
-  height:11rem;
-  width:21rem;   
+  height:8rem;
+  width:14rem;   
   margin:1rem;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
   overflow: hidden;
@@ -348,6 +5466,8 @@ nav a:hover{
 
 div .card{
   text-align:center;
+  
+ 
 }
 
 .descricao{
@@ -360,12 +5480,13 @@ div .card{
 }
 
 .video-conteudo .video{
-  height:11rem;
-  width:21rem;   
+  height:8rem;
+  width:14rem;   
   margin:1rem;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
   overflow: hidden;
   border-radius: 1rem;
+ 
 }
 
 .video-conteudo .video video{
@@ -396,30 +5517,1507 @@ div .card{
   transition: none;
   transform: translate(-50%, -50%) scale(1);
 }
-
 /*-------Localização mapa---------------------------*/
- 
-.mapaa {
-  align-items: center;
-  justify-content:center;
-  display: flex;
+
+#Banner-Onde{
+ margin-top: 2%;
+}
+
+.mapaa iframe {
+ align-items: center;
+ justify-content:center;
+ display: flex;
+ width: 100%;
+ height: 500px;
+}
+
+#TituloOnde {
+ font-size: 19px;
+ line-height: 99%;
+ margin-top: 3%;
+}
+
+/* ----------Parte Lista Usuário------------*/
+
+.homet img{
+margin-top: 2%;
+margin-left: -3%;
+width: 105%;
+height: auto;
+}
+
+#Cad_N_Usuario a{
+justify-content: center;
+padding: 1% 10%;
+}
+
+#Title_Lista_Usuario h3{
+font-size: 50px;
+margin: 0 0 1% 0;
+}
+
+#tabela_Lista_Usuario{
+margin: 0 0 0 0;
+
+}
+
+#tabela_Lista_Usuario tr,
+#tabela_Lista_Usuario td{
+font-size: 15px;
+text-align: center;
+margin-right: -4px;
+}
+
+#btn_Lista_Usuario_Editar{
+padding: 1px 3px;
+font-size: 15px;
+
+margin: 2% 15% 0 -60%;
+}
+
+#btn_Lista_Usuario_Deletar{
+padding: 1px 3px;
+font-size: 14px;
+margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastrar Usuário------------*/
+
+#title_cad_N_Usuario h3{
+font-size: 25px;
+}
+
+#btn_Cad_N_Usuario_Cadastrar input{
+padding: 10px 200px;
+margin-left: 20%;
+}
+
+#btn_Cad_N_Usuario_Limpar input{
+padding: 10px 206px;
+margin-left: 20%;
+}
+
+#btn_Cad_N_Usuario_Cancelar a{
+padding: 10px 201px;
+margin-left: 20%;
+}
+
+/* ----------Parte Editar Usuário------------*/
+
+#title_Editar_Cad h3{
+font-size: 25px;
+}
+
+#Tipo_Conta{
+font-size: 10px;
+text-align: center;
+}
+
+#btn_Editar_Cad input{
+padding: 10px 200px;
+margin-left: 20%;
+}
+
+#btn_Cancel_Edit_Cad a{
+padding: 10px 201px;
+margin-left: 20%;
+}
+
+/* ----------Parte Listagem Produto------------*/
+
+.homet img{
+margin-top: 2%;
+margin-left: -3%;
+width: 105%;
+height: auto;
+}
+
+#Cad_N_Produto a{
+justify-content: center;
+padding: 1% 10%;
+font-size: 20px;
+}
+
+#Title_Lista_Produto h3{
+font-size: 20px;
+margin: -10% 0 5% 0;
+}
+
+#tabela_Lista_Produto{
+margin: 0 0 0 0;
+
+}
+
+#tabela_Lista_Produto tr,
+#tabela_Lista_Produto td{
+font-size: 20px;
+text-align: center;
+margin-right: -4px;
+}
+
+#btn_Lista_Produto_Editar{
+padding: 1px 3px;
+font-size: 20px;
+
+margin: 2% 15% 0 -60%;
+}
+
+#btn_Lista_Produto_Deletar{
+padding: 1px 3px;
+font-size: 20px;
+margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastro Produto------------*/
+
+#title_Cad_Produto h3{
+font-size: 25px;
+}
+
+#btn_Cad_N_Produto_Cadastrar input{
+padding: 10px 200px;
+margin-left: 25%;
+}
+
+#btn_Cad_N_Produto_Limpar input{
+padding: 10px 206px;
+margin-left: 25%;
+}
+
+#btn_Cad_N_Produto_Cancelar a{
+padding: 10px 201px;
+margin-left: 25%;
+}
+
+/* ----------Parte Editar Produto------------*/
+
+#title_edit_Produto h3{
+font-size: 25px;
+}
+
+#btn_Editar_edit input{
+padding: 10px 80px;
+margin-left: 10%;
+}
+
+#btn_Cancel_Edit_edit a{
+padding: 10px 81px;
+margin-left: 10%;
+}
+
+/* ----------Parte Mensagem------------*/
+
+#menssagem h3{
+font-size: 50px;
+}
+
+#tabela_Lista_Menssagem {
+margin: 0 0 0 -5%;
+}
+
+#tabela_Lista_Menssagem tr,
+#tabela_Lista_Menssagem td{
+font-size: 20px;
+max-width: 29ch;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+}
+
+#div2 {
+white-space: nowrap; 
+width: 12em; 
+overflow: hidden;
+text-overflow: ellipsis; 
+
+}
+
+#btn_Lista_Menssagem_Deletar{
+margin-left: 0; 
+}
+
+#btn_Lista_Menssagem_Deletar a{
+padding: 1px 3px;
+font-size: 20px;
+
+
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+ position: relative;
+ min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+ /* Margin bottom by footer height */
+ margin-bottom: 60px;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
+position: absolute;
+bottom: 0;
+width: 100%;
+white-space: nowrap;
+line-height: 60px; /* Vertically center the text there */
+text-align: center;
+font-size: 14px;
+}
+
+}
+
+/*Large devices (desktops, 1000px and up)*/
+@media (min-width: 1000px) { 
+
+  /*-------Parte Index----------*/
+  
+#banner-topo img{
+  position: relative;
   width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  margin: 4% 0 0 0;
+ }
+
+ #ProDestaques {
+   font-size: 35px;
+   margin-top: -7%;
+ }   
+
+.titulo2 {
+ font-size: 25px;
+ line-height: 50px;
+ text-align: center;
+ text-transform: uppercase;
+ font-weight: 700;
+ line-height: 1.2;
+}
+
+#ProdDes p {
+  padding: 5%;
+}
+
+.vermelho {
+ color: #ff0000;
+}
+
+.container .descricao {
+ margin: auto;
+}
+
+#quem_somos p{
+ line-height: 1.2;
+ font-size: 35px;
+ margin: 0 0 -1% 0;
+}
+
+#Title_Historia #TXT_Historia{
+ margin: 2% 0 0 0;
+}
+
+#Title_Historia #TXT_Sobre {
+ margin: 0 0 -10% 0;
+}
+
+/* ----------Produtos/Catalago------------*/
+
+.content-table {
+ border-collapse: collapse;
+ margin: -5% 0 2% -5%;
+ font-size: 0.9em;
+ min-width: 100%;
+ border-radius: 5px 5px 0 0;
+ overflow: hidden;
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table input{
+ width: 40px;
+ height: 30px;
+ padding-left: 10px;
+ font-size: 10px;
+ margin-right: 10px;
+ border: 1px solid #000000;
+}
+
+.content-table thead tr {
+ background-color: #53A801;
+ color: #ffffff;
+ text-align: left;
+ font-weight: bold;
+}
+
+.content-table thead tr td{
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0);
+ padding: 8px;
+}
+
+.content-table tfoot tr td {
+ background-color: #b4f17a;
+ color: #000000;
+ text-align: center;
+ font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+ padding: 12px 15px;
+ font-size: 15px;
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0); 
+}
+
+.content-table tfoot tr td{
+ font-size: 18px;
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0);
+ padding: 8px;
+}
+
+.content-table tfoot tr:last-of-type {
+ border-bottom: 2px solid #53A801;
+}
+
+#btn-index{
+ width: 100%;
+ height: 10%;
+ font-size: 15px;
+ 
+}
+
+/*-------Missão, Visão e Valores----------*/
+
+.avaliacoes {
+ padding-top: 100px;
+}
+
+.avaliacoes .col-3 {
+ background: #afafad2a;
+ text-align: justify;
+ padding: 40px 20px;
+ box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+ cursor: pointer;
+ transition: transform 0.5s;
+ 
+}
+
+.avaliacoes .col-3:hover {
+ transform: translateY(-10px);
+}
+
+.small-container {
+ max-width: 1080px;
+ margin: auto;
+ padding-left: 20px;
+ padding-right: 20px;
+}
+
+.row {
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
+
+.col-3 {
+ flex-basis: 30%;
+ min-width: 250px;
+ margin-bottom: 30px;
+}
+
+.col-3 p {
+ font-size: 15px;
+ margin: 12px 0;
+ color: black;
+}
+
+.laranja {
+ color: #ff0000;
+ font-size: 25px;
+}
+
+/* ----------Parte do formulario Contato------------*/
+
+.telacontato * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+#Login_Title h3{
+ font-size: 50px;
+}
+
+#Banner-Contato img{
+ margin-top: 2%;
+}
+
+#contato h1 {
+ font-size: 40px;
+}
+
+.telacontato {
+ background: #000000;
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+ padding-right: 1rem;
+ padding-left: 1rem;
+ margin-top: 5%;
+}
+
+.telacontato h1,
+.telacontato h2 {
+ font-size: 3rem;
+ color: rgb(255, 255, 255);
+ margin-bottom: 2rem;
+ text-align: center;
+ line-height: 1.2;
+}
+
+.telacontato h1::before {
+ content: "📧";
+ display: block;
+}
+
+.telacontato h2::before {
+ content: "🐅";
+ display: block;
+}
+
+.telacontato form {
+ width: 100%;
+ max-width: 32rem;
+ font-size: 1.125rem;
+}
+
+.telacontato form label,
+.telacontato form input,
+.telacontato form textarea,
+.telacontato form button {
+ display: block;
+ width: 100%;
+}
+
+.telacontato form label {
+ color: rgb(255, 255, 255);
+ line-height: 1;
+ margin-bottom: 0.5rem;
+}
+
+.telacontato form input,
+.telacontato form textarea {
+ font: inherit;
+ padding: 0.8rem;
+ margin-bottom: 1rem;
+ border: 1px solid transparent;
+ border-radius: 8px;
+ transition: border-color, box-shadow 0.2s;
+}
+
+.telacontato form textarea {
+ min-height: 13rem;
+ resize: vertical;
+}
+
+.telacontato form input:hover,
+.telacontato form input:focus,
+.telacontato form textarea:hover,
+.telacontato form textarea:focus {
+ outline: none;
+ border-color: rgb(255, 0, 0);
+ box-shadow: 0 0 0 3px #ff4d4d;
+}
+
+.telacontato form button {
+ display: block;
+ padding: 1rem;
+ background: #ff0000;
+ color: rgb(255, 255, 255);
+ font: inherit;
+ text-transform: uppercase;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ transition: 0.2s;
+}
+
+.telacontato form button:hover,
+.telacontato form button:focus {
+ outline: none;
+ background: rgb(255, 0, 0);
+}
+
+form .btn_cadastrar input {
+  padding: 10px 9px;
+}
+
+/* ----------Parte Login------------*/
+
+#btn_entrar_login input{
+ padding: 10px 90px;
+ margin: 0 0 0 -5%;
+ display: flex;
+}
+
+#btn_cancelar_login a{
+ padding: 10px 82px;
+ margin-left: 5%;
+}
+
+/* ----------Parte receitas------------*/
+
+#banner-receitas img{
+ width: 100%;
+ margin-top: 2%;
+}
+
+.video-conteudo{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card .video{
+  height:8rem;
+  width:13rem;   
+  margin:1rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+div .card{
+  text-align:center;
+}
+
+.descricao{
+  margin: 10px auto 10px auto;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top:0px;
+  margin-bottom: auto;
+ 
+}
+
+.video-conteudo .video{
+  height:8rem;
+  width:13rem;   
+  margin:1rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+  overflow: hidden;
+  border-radius: 1rem;
+ 
+}
+
+.video-conteudo .video video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.video-conteudo .video video:hover{
+  transition: .2s linear;
+  transform: scale(1.3);
+}
+
+.video-conteudo .video .active{
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0,0,0,.7);
+  z-index: 1;
+}
+
+.video-conteudo .video .active:hover{
+  transition: none;
+  transform: translate(-50%, -50%) scale(1);
+}
+/*-------Localização mapa---------------------------*/
+
+#Banner-Onde{
+ margin-top: 2%;
+}
+
+.mapaa iframe {
+ align-items: center;
+ justify-content:center;
+ display: flex;
+ width: 100%;
+ height: 500px;
+}
+
+#TituloOnde {
+ font-size: 19px;
+ line-height: 99%;
+ margin-top: 3%;
+}
+
+/* ----------Parte Lista Usuário------------*/
+
+.homet img{
+margin-top: 2%;
+margin-left: -3%;
+width: 105%;
+height: auto;
+}
+
+#Cad_N_Usuario a{
+justify-content: center;
+padding: 1% 10%;
+}
+
+#Title_Lista_Usuario h3{
+font-size: 50px;
+margin: 0 0 1% 0;
+}
+
+#tabela_Lista_Usuario{
+margin: 0 0 0 0;
+
+}
+
+#tabela_Lista_Usuario tr,
+#tabela_Lista_Usuario td{
+font-size: 15px;
+text-align: center;
+margin-right: -4px;
+}
+
+#btn_Lista_Usuario_Editar{
+padding: 1px 3px;
+font-size: 15px;
+
+margin: 2% 15% 0 -60%;
+}
+
+#btn_Lista_Usuario_Deletar{
+padding: 1px 3px;
+font-size: 14px;
+margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastrar Usuário------------*/
+
+#title_cad_N_Usuario h3{
+font-size: 50px;
+}
+
+#btn_Cad_N_Usuario_Cadastrar input{
+padding: 10px 200px;
+margin-left: 20%;
+}
+
+#btn_Cad_N_Usuario_Limpar input{
+padding: 10px 206px;
+margin-left: 20%;
+}
+
+#btn_Cad_N_Usuario_Cancelar a{
+padding: 10px 201px;
+margin-left: 20%;
+}
+
+/* ----------Parte Editar Usuário------------*/
+
+#title_Editar_Cad h3{
+font-size: 50px;
+}
+
+#Tipo_Conta{
+font-size: 10px;
+text-align: center;
+}
+
+#btn_Editar_Cad input{
+padding: 10px 300px;
+margin-left: 10%;
+}
+
+#btn_Cancel_Edit_Cad a{
+padding: 10px 301px;
+margin-left: 10%;
+}
+
+/* ----------Parte Listagem Produto------------*/
+
+.homet img{
+margin-top: 2%;
+margin-left: -3%;
+width: 105%;
+height: auto;
+}
+
+#Cad_N_Produto a{
+justify-content: center;
+padding: 1% 10%;
+font-size: 20px;
+}
+
+#Title_Lista_Produto h3{
+font-size: 20px;
+margin: -10% 0 5% 0;
+}
+
+#tabela_Lista_Produto{
+margin: 0 0 0 0;
+
+}
+
+#tabela_Lista_Produto tr,
+#tabela_Lista_Produto td{
+font-size: 20px;
+text-align: center;
+margin-right: -4px;
+}
+
+#btn_Lista_Produto_Editar{
+padding: 1px 3px;
+font-size: 19px;
+
+margin: 2% 15% 0 -60%;
+}
+
+#btn_Lista_Produto_Deletar{
+padding: 1px 3px;
+font-size: 19px;
+margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastro Produto------------*/
+
+#title_Cad_Produto h3{
+font-size: 50px;
+}
+
+#btn_Cad_N_Produto_Cadastrar input{
+padding: 10px 300px;
+margin-left: 10%;
+}
+
+#btn_Cad_N_Produto_Limpar input{
+padding: 10px 306px;
+margin-left: 10%;
+}
+
+#btn_Cad_N_Produto_Cancelar a{
+padding: 10px 301px;
+margin-left: 10%;
+}
+
+/* ----------Parte Editar Produto------------*/
+
+#title_edit_Produto h3{
+font-size: 50px;
+}
+
+#btn_Editar_edit input{
+padding: 10px 300px;
+margin-left: 10%;
+}
+
+#btn_Cancel_Edit_edit a{
+padding: 10px 301px;
+margin-left: 10%;
+}
+
+/* ----------Parte Mensagem------------*/
+
+#menssagem h3{
+font-size: 50px;
+}
+
+#tabela_Lista_Menssagem {
+margin: 0 0 0 0;
+}
+
+#tabela_Lista_Menssagem tr,
+#tabela_Lista_Menssagem td{
+font-size: 15px;
+max-width: 29ch;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+}
+
+#div2 {
+white-space: nowrap; 
+width: 12em; 
+overflow: hidden;
+text-overflow: ellipsis; 
+
+}
+
+#btn_Lista_Menssagem_Deletar{
+margin-left: 0; 
+}
+
+#btn_Lista_Menssagem_Deletar a{
+padding: 1px 3px;
+font-size: 15px;
+
+
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+ position: relative;
+ min-height: 100%;
+}
+
+body {
+ /* Margin bottom by footer height */
+ margin-bottom: 60px;
+}
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+white-space: nowrap;
+line-height: 60px; /* Vertically center the text there */
+text-align: center;
+font-size: 14px;
+}
+
+}
+
+/*Large devices (desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+
+  /*-------Parte Index----------*/
+  
+#banner-topo img{
+  position: relative;
+  width: 100%;
+  margin: 4% 0 0 0;
+ }
+
+ #ProDestaques {
+   font-size: 35px;
+   margin-top: -7%;
+ }   
+
+.titulo2 {
+ font-size: 25px;
+ line-height: 50px;
+ text-align: center;
+ text-transform: uppercase;
+ font-weight: 700;
+ line-height: 1.2;
+}
+
+#ProdDes p {
+  display: flex;
+  text-align: center;
+  margin-left: 18%;
+}
+
+.vermelho {
+ color: #ff0000;
+}
+
+.container .descricao {
+ margin: auto;
+}
+
+#quem_somos p{
+ line-height: 1.2;
+ font-size: 35px;
+ margin: 0 0 -1% 0;
+}
+
+#Title_Historia #TXT_Historia{
+ margin: 2% 0 0 0;
+}
+
+#Title_Historia #TXT_Sobre {
+ margin: 0 0 -10% 0;
+}
+
+/* ----------Produtos/Catalago------------*/
+
+.content-table {
+ border-collapse: collapse;
+ margin: -5% 0 2% -5.5%;
+ font-size: 0.9em;
+ min-width: 100%;
+ border-radius: 5px 5px 0 0;
+ overflow: hidden;
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table input{
+ width: 40px;
+ height: 30px;
+ padding-left: 10px;
+ font-size: 10px;
+ margin-right: 10px;
+ border: 1px solid #000000;
+}
+
+.content-table thead tr {
+ background-color: #53A801;
+ color: #ffffff;
+ text-align: left;
+ font-weight: bold;
+}
+
+.content-table thead tr td{
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0);
+ padding: 8px;
+}
+
+.content-table tfoot tr td {
+ background-color: #b4f17a;
+ color: #000000;
+ text-align: center;
+ font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+ padding: 12px 15px;
+ font-size: 15px;
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0); 
+}
+
+.content-table tfoot tr td{
+ font-size: 18px;
+ letter-spacing: 1px;
+ color: rgb(0, 0, 0);
+ padding: 8px;
+}
+
+.content-table tfoot tr:last-of-type {
+ border-bottom: 2px solid #53A801;
+}
+
+#btn-index{
+ width: 100%;
+ height: 10%;
+ font-size: 15px;
+ 
+}
+
+/*-------Missão, Visão e Valores----------*/
+
+.avaliacoes {
+ padding-top: 100px;
+}
+
+.avaliacoes .col-3 {
+ background: #afafad2a;
+ text-align: justify;
+ padding: 40px 20px;
+ box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+ cursor: pointer;
+ transition: transform 0.5s;
+ 
+}
+
+.avaliacoes .col-3:hover {
+ transform: translateY(-10px);
+}
+
+.small-container {
+ max-width: 1080px;
+ margin: auto;
+ padding-left: 20px;
+ padding-right: 20px;
+}
+
+.row {
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
+
+.col-3 {
+ flex-basis: 30%;
+ min-width: 250px;
+ margin-bottom: 30px;
+}
+
+.col-3 p {
+ font-size: 15px;
+ margin: 12px 0;
+ color: black;
+}
+
+.laranja {
+ color: #ff0000;
+ font-size: 25px;
+}
+
+/* ----------Parte do formulario Contato------------*/
+
+.telacontato * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+#Login_Title h3{
+ font-size: 50px;
+}
+
+#Banner-Contato img{
+ margin-top: 2%;
+}
+
+#contato h1 {
+ font-size: 40px;
+}
+
+.telacontato {
+ background: #000000;
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+ padding-right: 1rem;
+ padding-left: 1rem;
+ margin-top: 5%;
+}
+
+.telacontato h1,
+.telacontato h2 {
+ font-size: 3rem;
+ color: rgb(255, 255, 255);
+ margin-bottom: 2rem;
+ text-align: center;
+ line-height: 1.2;
+}
+
+.telacontato h1::before {
+ content: "📧";
+ display: block;
+ font-size: 50px;
+}
+
+.telacontato h2::before {
+ content: "🐅";
+ display: block;
+}
+
+.telacontato form {
+ width: 100%;
+ max-width: 32rem;
+ font-size: 1.125rem;
+}
+
+.telacontato form label,
+.telacontato form input,
+.telacontato form textarea,
+.telacontato form button {
+ display: block;
+ width: 100%;
+}
+
+.telacontato form label {
+ color: rgb(255, 255, 255);
+ line-height: 1;
+ margin-bottom: 0.5rem;
+}
+
+.telacontato form input,
+.telacontato form textarea {
+ font: inherit;
+ padding: 0.8rem;
+ margin-bottom: 1rem;
+ border: 1px solid transparent;
+ border-radius: 8px;
+ transition: border-color, box-shadow 0.2s;
+}
+
+.telacontato form textarea {
+ min-height: 13rem;
+ resize: vertical;
+}
+
+.telacontato form input:hover,
+.telacontato form input:focus,
+.telacontato form textarea:hover,
+.telacontato form textarea:focus {
+ outline: none;
+ border-color: rgb(255, 0, 0);
+ box-shadow: 0 0 0 3px #ff4d4d;
+}
+
+.telacontato form button {
+ display: block;
+ padding: 1rem;
+ background: #ff0000;
+ color: rgb(255, 255, 255);
+ font: inherit;
+ text-transform: uppercase;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ transition: 0.2s;
+}
+
+.telacontato form button:hover,
+.telacontato form button:focus {
+ outline: none;
+ background: rgb(255, 0, 0);
+}
+
+form .btn_cadastrar input {
+  padding: 10px 90px;
+}
+
+/* ----------Parte Login------------*/
+
+#btn_entrar_login input{
+ padding: 10px 90px;
+ margin: 0 10% 0 0;
+ display: flex;
+}
+
+#btn_cancelar_login a{
+ padding: 10px 82px;
+ margin-left: 10%;
+}
+
+/* ----------Parte receitas------------*/
+
+#banner-receitas img{
+ width: 100%;
+ margin-top: 2%;
+}
+
+.video-conteudo{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card .video{
+  height:10rem;
+  width:19rem;   
+  margin:1rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+div .card{
+  text-align:center;
+  
+ 
+}
+
+.descricao{
+  margin: 10px auto 10px auto;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top:0px;
+  margin-bottom: auto;
+ 
+}
+
+.video-conteudo .video{
+  height:9rem;
+  width:18rem;   
+  margin:1rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+  overflow: hidden;
+  border-radius: 1rem;
+ 
+}
+
+.video-conteudo .video video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.video-conteudo .video video:hover{
+  transition: .2s linear;
+  transform: scale(1.3);
+}
+
+.video-conteudo .video .active{
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0,0,0,.7);
+  z-index: 1;
+}
+
+.video-conteudo .video .active:hover{
+  transition: none;
+  transform: translate(-50%, -50%) scale(1);
+}
+/*-------Localização mapa---------------------------*/
+
+#Banner-Onde{
+ margin-top: 2%;
+}
+
+.mapaa iframe {
+ align-items: center;
+ justify-content:center;
+ display: flex;
+ width: 100%;
+ height: 500px;
+}
+
+#TituloOnde {
+ font-size: 19px;
+ line-height: 99%;
+ margin-top: 3%;
+}
+
+/* ----------Parte Lista Usuário------------*/
+
+.homet img{
+margin-top: 2%;
+margin-left: -3%;
+width: 105%;
+height: auto;
+}
+
+#Cad_N_Usuario a{
+justify-content: center;
+padding: 1% 10%;
+}
+
+#Title_Lista_Usuario h3{
+font-size: 50px;
+margin: 0 0 1% 0;
+}
+
+#tabela_Lista_Usuario{
+margin: 0 0 0 0;
+
+}
+
+#tabela_Lista_Usuario tr,
+#tabela_Lista_Usuario td{
+font-size: 15px;
+text-align: center;
+margin-right: -4px;
+}
+
+#btn_Lista_Usuario_Editar{
+padding: 1px 3px;
+font-size: 15px;
+
+margin: 2% 15% 0 -60%;
+}
+
+#btn_Lista_Usuario_Deletar{
+padding: 1px 3px;
+font-size: 14px;
+margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastrar Usuário------------*/
+
+#title_cad_N_Usuario h3{
+font-size: 50px;
+}
+
+#btn_Cad_N_Usuario_Cadastrar input{
+padding: 10px 200px;
+margin-left: 30%;
+}
+
+#btn_Cad_N_Usuario_Limpar input{
+padding: 10px 206px;
+margin-left: 30%;
+}
+
+#btn_Cad_N_Usuario_Cancelar a{
+padding: 10px 201px;
+margin-left: 30%;
+}
+
+/* ----------Parte Editar Usuário------------*/
+
+#title_Editar_Cad h3{
+font-size: 50px;
+}
+
+#Tipo_Conta{
+font-size: 10px;
+text-align: center;
+}
+
+#btn_Editar_Cad input{
+padding: 10px 300px;
+margin-left: 20%;
+}
+
+#btn_Cancel_Edit_Cad a{
+padding: 10px 301px;
+margin-left: 20%;
+}
+
+/* ----------Parte Listagem Produto------------*/
+
+.homet img{
+margin-top: 2%;
+margin-left: -3%;
+width: 105%;
+height: auto;
+}
+
+#Cad_N_Produto a{
+justify-content: center;
+padding: 1% 10%;
+font-size: 20px;
+}
+
+#Title_Lista_Produto h3{
+font-size: 20px;
+margin: -10% 0 5% 0;
+}
+
+#tabela_Lista_Produto{
+margin: 0 0 0 0;
+
+}
+
+#tabela_Lista_Produto tr,
+#tabela_Lista_Produto td{
+font-size: 20px;
+text-align: center;
+margin-right: -4px;
+}
+
+#btn_Lista_Produto_Editar{
+padding: 1px 3px;
+font-size: 19px;
+
+margin: 2% 15% 0 -60%;
+}
+
+#btn_Lista_Produto_Deletar{
+padding: 1px 3px;
+font-size: 19px;
+margin: 0 -50% 0 0;
+}
+
+/* ----------Parte Cadastro Produto------------*/
+
+#title_Cad_Produto h3{
+font-size: 50px;
+}
+
+#btn_Cad_N_Produto_Cadastrar input{
+padding: 10px 300px;
+margin-left: 20%;
+}
+
+#btn_Cad_N_Produto_Limpar input{
+padding: 10px 306px;
+margin-left: 20%;
+}
+
+#btn_Cad_N_Produto_Cancelar a{
+padding: 10px 301px;
+margin-left: 20%;
+}
+
+/* ----------Parte Editar Produto------------*/
+
+#title_edit_Produto h3{
+font-size: 50px;
+}
+
+#btn_Editar_edit input{
+padding: 10px 300px;
+margin-left: 20%;
+}
+
+#btn_Cancel_Edit_edit a{
+padding: 10px 301px;
+margin-left: 20%;
+}
+
+/* ----------Parte Mensagem------------*/
+
+#menssagem h3{
+font-size: 50px;
+}
+
+#tabela_Lista_Menssagem {
+margin: 0 0 0 0;
+}
+
+#tabela_Lista_Menssagem tr,
+#tabela_Lista_Menssagem td{
+font-size: 20px;
+max-width: 29ch;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+}
+
+#div2 {
+white-space: nowrap; 
+width: 12em; 
+overflow: hidden;
+text-overflow: ellipsis; 
+
+}
+
+#btn_Lista_Menssagem_Deletar{
+margin-left: 0; 
+}
+
+#btn_Lista_Menssagem_Deletar a{
+padding: 1px 3px;
+font-size: 20px;
+
+
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+ position: relative;
+ min-height: 100%;
+}
+
+body {
+ /* Margin bottom by footer height */
+ margin-bottom: 60px;
+}
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+white-space: nowrap;
+line-height: 60px; /* Vertically center the text there */
+text-align: center;
+font-size: 14px;
+}
+
 }

@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using MySqlConnector;
 using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PI_SITE.Models
 {

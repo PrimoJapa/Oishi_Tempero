@@ -5,31 +5,43 @@
     ViewData["Title"] = "CadastroProduto";
 }
 
- <div class="container text-center">
-		<h3 class="display-4">Cadastrar Novo Produto</h3>
+<div class="container" id="title_Cad_Produto">
+    <div class="row">
+        <div class="col">
+            <div class="container text-center">
+                <h3 class="display-4">Cadastrar Novo Produto</h3>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="container w-50 jumbotron">
+<div class="container jumbotron">
     <form method="POST" asp-action="CadastroProduto">
-        <div class="form-group"> 
+        <div class="container">
+            <div class="row">
+                <div class="col"> 
+                    <div class="form-group"> 
 
-            <p><label asp-for="Nome">Nome Do Produto: </label>
-			<input class="form-control" asp-for="Nome" type="text" maxlength="90" autocomplete="off" required autofocus /></p>
+                        <p><label asp-for="Nome">Nome Do Produto: </label>
+                        <input class="form-control" asp-for="Nome" type="text" maxlength="90" autocomplete="off" required autofocus /></p>
 
-            <p><label asp-for="Peso">Peso Do Produto: </label>
-			<input class="form-control" asp-for="Peso" type="number" maxlength="90" autocomplete="off" required autofocus /></p>
+                        <p><label asp-for="Peso">Peso Do Produto: </label>
+                        <input class="form-control" asp-for="Peso" type="number" maxlength="90" autocomplete="off" required autofocus /></p>
 
-            <p><label asp-for="Valor">Valor Unitário: </label>
-			<input class="form-control" asp-for="Valor" type="number" maxlength="90" autocomplete="off" required autofocus /></p>
+                        <p><label asp-for="Valor">Valor Unitário: </label>
+                        <input class="form-control" asp-for="Valor" type="number" maxlength="90" autocomplete="off" required autofocus /></p>
 
-            <p><label asp-for="Quantidade">Quantidade: </label>
-	        <input class="form-control" asp-for="Quantidade" type="number" maxlength="90" autocomplete="off" required autofocus /></p>
+                        <p><label asp-for="Quantidade">Quantidade: </label>
+                        <input class="form-control" asp-for="Quantidade" type="number" maxlength="90" autocomplete="off" required autofocus /></p>
 
-            <div class="btn_cadastrar"><p><input class="btn btn-info" type="submit" value="Cadastrar" /></p></div>
+                        <div class="btn_cadastrar" id="btn_Cad_N_Produto_Cadastrar"><p><input class="btn btn-info" type="submit" value="Cadastrar" /></p></div>
 
-            <div class="btn_limpar"><p><input  class="btn btn-outline-warning" type="reset" value="Limpar"></p></div>
+                        <div class="btn_limpar" id="btn_Cad_N_Produto_Limpar"><p><input  class="btn btn-outline-warning" type="reset" value="Limpar"></p></div>
 
-            <div class="btn_cancelar"><p><a class="btn btn-outline-danger" href="/Produto/ListarProduto">Cancelar</a></p></div>
+                        <div class="btn_cancelar" id="btn_Cad_N_Produto_Cancelar"><p><a class="btn btn-outline-danger" href="/Produto/ListarProduto">Cancelar</a></p></div>
+                    </div> 
+                </div> 
+            </div> 
         </div>   	
     </form>
 </div>

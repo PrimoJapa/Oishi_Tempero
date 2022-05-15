@@ -4,48 +4,46 @@
     ViewData["Title"] = "Login";
 }
 
-	<div class="container text-center">
+	<div class="container text-center" id="Login_Title">
 		<h3 class="display-2">Login</h3>
     </div>
 
-	<div class="container w-50 jumbotron">
+	<div class="container jumbotron">
 		<form action="Login" method="POST" >
-			<div class="form-group">
-				<p><label asp-for="Login">Login: </label>
-				<input class="form-control" asp-for="Login" type="text" maxlength="90" autocomplete="off" required autofocus /></p>
+			<div class="container">
+                <div class="row">
+                    <div class="col-8">
+						<div class="form-group">
 
-				<p><label asp-for="Senha">Senha: </label>
-				<input class="form-control" asp-for="Senha" type="password" maxlength="90" autocomplete="off" required autofocus /></p>
-                 
-            <div class="d-grid gap-2 d-md-flex justify-content-md-center">   
-                <div class="btn_login_entrar">
-				   <p><input class="btn btn-info" type="submit" name="Entrar" value="Entrar" /></p>
-			    </div>
+							<p><label asp-for="Login">Login: </label>
+							<input class="form-control" asp-for="Login" type="text" maxlength="90" autocomplete="off" required autofocus /></p>
 
-			    <div class="btn_login_cancelar">
-		        	<a class="btn btn-outline-danger" href="/Home/index">Cancelar</a>
-		        </div>
+							<p><label asp-for="Senha">Senha: </label>
+							<input class="form-control" asp-for="Senha" type="password" maxlength="90" autocomplete="off" required autofocus /></p>
+							
+							<div class="d-grid gap-2 d-md-flex justify-content-md-center">   
+								<div class="btn_login_entrar" id="btn_entrar_login">
+									<p><input class="btn btn-info" type="submit" name="Entrar" value="Entrar" /></p>
+								</div>
 
-            </div>   
+								<div class="btn_login_cancelar" id="btn_cancelar_login">
+									<a class="btn btn-outline-danger" href="/Home/index">Cancelar</a>
+								</div>
+							</div>   
 
-            <hr/>
-             <p class="container text-center">Ainda não é cadastrado? Sem problemas!</p>
-            <div class="container text-center">
-             <a class="btn btn-primary" href="/Usuario/CadastroUsuario">Cadastrar-se</a>
-            </div>
-
-                
-
-                
-				<div class="mensagem">
-                   @ViewBag.Mensagem
-                </div>  
+						        <hr/>
+						        <p class="container text-center">Ainda não é cadastrado? Sem problemas!</p>
+						    <div class="container text-center">
+						    <a class="btn btn-primary" href="/Usuario/CadastroUsuario">Cadastrar-se</a>
+						</div>
+			
+						<div class="mensagem">
+							@ViewBag.Mensagem
+						</div>  
+					</div>
+				</div>   
 			</div>		        
-        </form>
-		        
+        </form>        
 	</div>
-
 </div>
-
-
 </main>

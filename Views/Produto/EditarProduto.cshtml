@@ -5,31 +5,40 @@
     ViewData["Title"] = "Produto/EditarProduto";
 }
 
-<div class="container text-center">
-<b><h3 class="display-4">Atualizar Produto</h3></b></div>
+<div class="container" id="title_edit_Produto">
+    <div class="row">
+        <div class="col">
+            <div class="container text-center">
+            <b><h3 class="display-4">Atualizar Produto</h3></b></div>
+        </div>
+    </div>
+</div>
  
-<div class="container w-50 jumbotron">
+<div class="container jumbotron">
     <form asp-controller="Produto" asp-action="EditarProduto">
-        <div class="form-group">  
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">  
 
-            @Html.HiddenFor(model => model.Id)
-            <p><label asp-for="Nome">Nome Do Produto: </label>
-            @Html.TextBoxFor(model => model.Nome, new { @class="form-control"})</p>
+                        @Html.HiddenFor(model => model.Id)
+                        <p><label asp-for="Nome">Nome Do Produto: </label>
+                        @Html.TextBoxFor(model => model.Nome, new { @class="form-control"})</p>
 
-            <p><label asp-for="Peso">Peso Do Produto: </label>
-            @Html.EditorFor(model => model.Peso, new { htmlAttributes = new { @class = "form-control", @type = "number" } })</p>
-    
-            <p><label asp-for="Valor">Valor Unitário: </label>
-            @Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control", @type = "number" } })</p>
-            
-            <p><label asp-for="Quantidade">Quantidade: </label>
-            @Html.EditorFor(model => model.Quantidade, new { htmlAttributes = new { @class = "form-control", @type = "number" } })</p>
-            
-            <div class="btn_atualizar"><p><input class="btn btn-info" type="submit" value="Atualizar" /></p></div>
-            <div class="btn_cancelar"><a class="btn btn-outline-danger" href="/Produto/ListarProduto">Cancelar</a></div>
+                        <p><label asp-for="Peso">Peso Do Produto: </label>
+                        @Html.EditorFor(model => model.Peso, new { htmlAttributes = new { @class = "form-control", @type = "number" } })</p>
+                
+                        <p><label asp-for="Valor">Valor Unitário: </label>
+                        @Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control", @type = "number" } })</p>
+                        
+                        <p><label asp-for="Quantidade">Quantidade: </label>
+                        @Html.EditorFor(model => model.Quantidade, new { htmlAttributes = new { @class = "form-control", @type = "number" } })</p>
+                        
+                        <div class="btn_atualizar" id="btn_Editar_edit"><p><input class="btn btn-info" type="submit" value="Atualizar" /></p></div>
+                        <div class="btn_cancelar" id="btn_Cancel_Edit_edit"><a class="btn btn-outline-danger" href="/Produto/ListarProduto">Cancelar</a></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
-    
 </div> 
-	        
-</div>

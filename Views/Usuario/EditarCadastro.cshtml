@@ -5,43 +5,52 @@
     ViewData["Title"] = "Usuario/EditarCadastro";
 }
 
-<div class="container text-center"><b><h3 class="display-4">Atualizar Cadastro</h3></b></div>
-
-<div class="container w-50 jumbotron">
-    <form asp-controller="Usuario" asp-action="EditarCadastro">
-
-            <div class="form-group">
-
-                @Html.HiddenFor(model => model.Id)
-                <p><label asp-for="Nome">Nome: </label>
-                @Html.TextBoxFor(model => model.Nome, new { @class="form-control"})</p>
-
-                <p><label asp-for="DataNascimento">Data de Nascimento: </label>
-                @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control", @type = "date", @required = "required", @id= "date" } })</p>
-
-                <p><label asp-for="Contato">Contato: </label>
-                @Html.EditorFor(model => model.Contato, new { htmlAttributes = new { @class = "form-control", @type = "tel"  } })</p>
-
-                <p><label asp-for="Email">E-Mail: </label>
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @type = "email" } })</p>
-
-                <p><label asp-for="Login">Login: </label>
-                @Html.TextBoxFor(model => model.Login, new { @class="form-control"})</p>
-
-                <p><label asp-for="Senha">Senha: </label>
-                @Html.TextBoxFor(model => model.Senha, new { @class="form-control"})</p>
-
-                <p><label asp-for="Conta">Conta: ( *Administrador* ou *Colaborador* ou *Usuario*) </label>
-                 @Html.TextBoxFor(model => model.Conta, new { @class="form-control"})</p>
-
-                <div class="btn_atualizar"><p><input class="btn btn-info" type="submit" value="Atualizar" /></p></div>
-                <div class="btn_cancelar"><a class="btn btn-outline-danger" href="/Usuario/ListarUsuario">Cancelar</a></div>
+<div class="container" id="title_Editar_Cad">
+    <div class="row">
+        <div class="col">
+            <div class="container text-center">
+                <b>
+                    <h3 class="display-4">Atualizar Cadastro</h3>
+                </b>
             </div>
-    </form>
-	        
+        </div>
+    </div>
 </div>
 
+<div class="container jumbotron">
+    <form asp-controller="Usuario" asp-action="EditarCadastro">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
 
+                                @Html.HiddenFor(model => model.Id)
+                                    <p><label asp-for="Nome">Nome: </label>
+                                @Html.TextBoxFor(model => model.Nome, new { @class="form-control"})</p>
 
+                                    <p><label asp-for="DataNascimento">Data de Nascimento: </label>
+                                @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control", @type = "date", @required = "required", @id= "date" } })</p>
 
+                                    <p><label asp-for="Contato">Contato: </label>
+                                @Html.EditorFor(model => model.Contato, new { htmlAttributes = new { @class = "form-control", @type = "tel"  } })</p>
 
+                                    <p><label asp-for="Email">E-Mail: </label>
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @type = "email" } })</p>
+
+                                    <p><label asp-for="Login">Login: </label>
+                                @Html.TextBoxFor(model => model.Login, new { @class="form-control"})</p>
+
+                                    <p><label asp-for="Senha">Senha: </label>
+                                @Html.TextBoxFor(model => model.Senha, new { @class="form-control"})</p>
+
+                                    <p id="Tipo_Conta"><label asp-for="Conta">("Administrador"|"Colaborador"|"Usuario") </label>
+                                @Html.TextBoxFor(model => model.Conta, new { @class="form-control"})</p>
+
+                            <div class="btn_atualizar" id="btn_Editar_Cad"><p><input class="btn btn-info" type="submit" value="Atualizar" /></p></div>
+                        <div class="btn_cancelar" id="btn_Cancel_Edit_Cad"><a class="btn btn-outline-danger" href="/Usuario/ListarUsuario">Cancelar</a></div>
+                    </div>
+                </div>
+			</div>   
+		</div>	
+    </form>        
+</div>
