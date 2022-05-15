@@ -1,0 +1,117 @@
+﻿@using PI_SITE.Models
+@model IEnumerable<Produto>        
+
+@{
+    ViewData["Title"] = "";
+}
+
+<div class="banner-topo">
+        <img src="~/images/banner-oishii.jpg" width="100%">
+   </div> 
+
+<section class="produtos">
+<div class ="prod-col-1 text-center"><br>
+    <h1><p class="titulo2 vermelho">Produtos em destaques</p></h1>
+</div>
+    <table class="content-table">
+        <thead>
+            <tr  class="container text-center">
+                <strong>
+                <th>Produto</th>
+                <th>Peso</th>
+                <th>Valor Unitário</th>
+                <th>Quantidade</th> 
+                <th>Modo de Usar</th>         
+                </strong> 
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr  class="container text-center">
+                <td>Tempero Alho e Sal</td>
+                <td>300 gr</td>
+                <td>R$ 8,00</td>
+                <td>01 Un</td>
+                <td><a class="btn btn-outline-success" href="/Home/Receitas">Visualizar</a></td>
+            </tr>
+            
+             @foreach (Produto item in Model)
+             {
+                <tr  class="container text-center">
+                    <td>@item.Nome</td>
+                    <td>@item.Peso gr</td>
+                    <td>@item.Valor.ToString("C")</td>
+                    <td>@item.Quantidade.ToString("D2") Un</td>
+                    <td><a class="btn btn-outline-success" href="/Home/Receitas">Visualizar</a></td>
+                </tr>
+            }
+
+        </tbody>
+
+       
+         <tfoot>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tfoot>
+    </table>
+</section>
+
+<!---------------------------------Sobre a Empresa-------------------------------------------------------------->
+
+
+<section class="Sobre">
+    <div class="wrapper" id="quem_somos">
+            <p class="titulo2 vermelho">Conheça nossa história</p>
+    </div>
+
+    <div class="container">
+
+     <p class="descricao" align="justify">Oishi Temperos é uma loja de temperos caseiros na forma artesanal, a proprietária Sra. Gisele Tatiane sempre teve um desejo 
+        de ser uma empreendedora. Ela morou alguns anos no Japão e ganhou muitas experiências com a cultura do país, uma delas foi 
+        sobre o valor de uma alimentação saudável. Retornando para o Brasil ela decidiu abrir sua própria empresa de temperos 
+        artesanais, pois seus temperos são livres de conservantes químicos, assim ela ajuda as pessoas a ter uma alimentação mais 
+        saudável, o nome de sua loja é uma junção de uma palavra japonesa: Oishi que significa (Gostoso, Saboroso ou Delicioso) 
+        com a palavra Temperos. Ela começou vendendo para seus familiares e amigos, mas já está se preparando para fornecer seus             temperos para mercados e varejos, foi onde ela sentiu a necessidade de divulgar sua marca e seus produtos de modo mais amplo, 
+        sua visão é estar entre as maiores empresas de temperos artesanais da América Latina, sendo reconhecida por seus parceiros e 
+        clientes pela qualidade dos produtos e pela excelência gestão empresarial.<p></p>
+                
+        <p class="titulo2 vermelho"> Sobre </p>
+
+        <p class="descricao" align="justify">A Oishi é uma fábrica de especiarias, molhos, temperos e condimentos. Oferecemos aos nossos clientes uma grande 
+        variedade de produtos, feitos com total dedicação para tornar seu dia a dia mais prático e saboroso.</p>
+
+    </div>
+                            
+<!---------------------------------Missão, Visão e Valores-------------------------------------------------------------->
+
+    <div class="avaliacoes">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3"> 
+                    <center><p><b class="laranja">Missão</b></p></center>
+                    <p>Levar o melhor sabor que o tempero caseiro oferece para sua cozinha, aliado à praticidade que a vida moderna impõe. 
+                    Tudo isso com preço acessível e a qualidade que só a Produtos Oishii oferece.</p>
+                </div>
+
+                <div class="col-3">
+                    <center><p><b class="laranja">Visão</b></p></center>
+                    <p>Obter o reconhecimento de nossos clientes, quanto a qualidade dos nossos produtos, buscando expandir nossa marca 
+                    nas melhores redes de atacado e varejo por todo o Brasil.<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
+                </div>
+
+                <div class="col-3">   
+                    <center><p><b class="laranja">Valores</b></p></center>
+                    <p>Somos uma empresa com princípios éticos, administração transparente, enfatizando a valorização de nossos 
+                    colaboradores, a pontualidade e o preço competitivo para o mercado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

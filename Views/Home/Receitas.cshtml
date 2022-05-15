@@ -1,0 +1,112 @@
+@using PI_SITE.Models
+@{
+    ViewData["Title"] = "Receitas";
+}
+
+
+<div class="banner-topo"><img src="~/images/banner-receitas.jpg" width="100%"></div>
+
+    
+<div class="conteudo">
+
+    <div class="video-conteudo">
+
+        <div class="card">
+        <div class="video">
+            <video src="~/video/video1.mp4"></video>  
+            <div class="descricao">
+            </div>        
+        </div>
+        <span><h4>Picanha invertida</h4></span>
+        </div>
+        
+        <div class="card">
+        <div class="video">
+            <video src="~/video/video2.mp4"></video>
+            <div class="descricao">
+            </div>
+        </div>
+        <span><h4>Massa de pizza caseira</h4></span>
+        </div>
+        
+        <div class="card">
+        <div class="video">
+            <video src="~/video/video3.mp4"></video>
+            <div class="descricao">
+            </div>
+        </div>
+        <span><h4>Sanduíche natural </h4></span>
+        </div>
+         
+        <div class="card">
+        <div class="video">
+            <video src="~/video/video4.mp4"></video>  
+            <div class="descricao">
+            </div>        
+        </div>
+        <span><h4>Yakisoba de camarão</h4></span>
+        </div>
+        
+        <div class="card">
+        <div class="video">
+            <video src="~/video/video5.mp4"></video>
+            <div class="descricao">
+            </div>
+        </div>
+        <span><h4>Cenoura refogada simples</h4></span>
+        </div>
+        
+        <div class="card">
+        <div class="video">
+            <video src="~/video/video6.mp4"></video>
+            <div class="descricao">
+            </div>
+        </div>
+        <span><h4>Sashimi de salmão</h4></span>
+        </div>
+
+        <div class="card">
+        <div class="video">
+            <video src="~/video/video7.mp4"></video>  
+            <div class="descricao">
+            </div>        
+        </div>
+        <span><h4>Caranguejo com pirão</h4></span>
+        </div>
+        
+        <div class="card">
+        <div class="video">
+            <video src="~/video/video8.mp4"></video>
+            <div class="descricao">
+            </div>
+        </div>
+        <span><h4>Alimentação Saudável</h4></span>
+        </div>
+        
+        <div class="card">
+        <div class="video">
+            <video src="~/video/video9.mp4"></video>
+            <div class="descricao">
+            </div>
+        </div>
+        <span><h4>Croissant com mel</h4></span>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    var video = document.querySelectorAll('video')
+
+    video.forEach(play => play.addEventListener('click', () =>{
+
+        play.classList.toggle('active');
+
+        if(play.paused){
+            play.play();
+        }else{
+            play.pause();
+            play.currentTime = 0;
+        }
+    }));
+</script>

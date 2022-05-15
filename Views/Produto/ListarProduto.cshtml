@@ -1,0 +1,76 @@
+@model IEnumerable<Produto>
+@using PI_SITE.Models
+
+@{
+    ViewData["Title"] = "ListarProduto";
+}
+
+<div class="homet">
+    <img src="~/images/banner-produtos.jpg" width="100%">
+</div><br>  
+
+<div class="container text-center">
+<div class="container text-center"><h3 class="display-4">LISTAGEM DE PRODUTOS</h3></div>    
+</div>
+
+@if (Model.Count() != 0){
+    
+<div class="btn2">
+    <p  class="container text-center"><a href="/Produto/CadastroProduto" class="btn btn-outline-dark" >Cadastrar Novo Produto</a></p>
+</div>
+
+<table class="table table-dark" style="width: 100%">
+    <thead>
+        <tr class="container text-center">
+            <strong>
+                <th scope="col">Cod</th>
+                <th scope="col">Nome Do Produto</th>
+                <th scope="col">Peso Do Produto</th>
+                <th scope="col">Valor Do Produto</th>
+                <th scope="col">Quantidade Do Produto</th>
+                <th scope="col">Ação</th>
+            </strong>
+        </tr>
+    </thead>
+
+    <tbody>
+    <tr  class="container text-center">
+        @foreach (Produto item in Model)
+        {
+            <tr class="container text-center">
+                <td>@item.Id.ToString("D2")</td>
+                <td>@item.Nome</td>
+                <td>@item.Peso gr</td>
+                <td>@item.Valor.ToString("C")</td>
+                <td>@item.Quantidade.ToString("D2") Un</td>
+                <td><p>
+                        <a class="btn btn-outline-warning" asp-controller="Produto" asp-action="EditarProduto" asp-route-Id="@item.Id">Editar</a>
+                        <a class="btn btn-outline-danger" asp-controller="Produto" asp-action="RemoverProduto" asp-route-Id="@item.Id">Deletar</a>
+                </p></td>
+            </tr>
+        }
+    </tr>
+
+  </tbody>
+
+  <tfoot>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+  </tfoot>
+</table>
+@if (Model.Count() < 2){
+        //Informar para repor produto no estoque!
+
+    <div class="container text-center"><h3>Estoque abaixo do mínimo<br><p>Repor o estoque.</p></h3></div>
+}
+
+}else{
+    <b><h2 class="container text-center">Não existem Produtos Cadastardos!</h2></b>
+    <div class="btn2"><p  class="container text-center"><a href="/Produto/CadastroProduto" class="btn btn-outline-dark" >Cadastrar Produto</a></p></div>
+        }

@@ -1,0 +1,86 @@
+@model IEnumerable<Usuario>
+@using PI_SITE.Models
+
+@{
+    ViewData["Title"] = "ListaUsuario";
+}
+
+<div class="homet"><img src="~/images/banner-usuarios.png" width="100%"></div><br>  
+
+@if (Model.Count() != 0){
+
+<div class="container text-center"><h3 class="display-4">Lista de Usários</h3></div>
+
+
+<div class="btn2"><p  class="container text-center"><a href="/Usuario/CadastroUsuario" class="btn btn-outline-dark" >Cadastrar Novo Usario</a></p></div>
+
+<table class="table table-dark" style="width: 100%">
+    <thead>
+        <tr class="container text-center">
+            <strong>
+                <th scope="col">Cod</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Data de Nascimento</th>
+                <th scope="col">Contato</th>
+                <th scope="col">Email</th>
+                <th scope="col">Login</th>
+                <th scope="col">Senha</th>
+                <th scope="col">Conta</th>
+                <th scope="col">Ação</th>
+            </strong>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+        @foreach (Usuario item in Model)
+           {
+                <tr  class="container text-center">
+                    <td>@item.Id.ToString("D2")</td>
+                    <td>@item.Nome</td>
+                    <td>@item.DataNascimento.ToString("dd/MM/yyyy")</td>
+                    <td>@item.Contato.ToString("## ##### ####")</td>
+                    <td>@item.Email</td>
+                    <td>@item.Login</td>
+                    <td>@item.Senha</td>
+                    <td>@item.Conta</td>
+                    <td>
+                        <p>
+                             <div class="d-grid gap-2 d-md-flex justify-content-md-center"> 
+                               <a class="btn btn-outline-warning" asp-controller="Usuario" asp-action="EditarCadastro" asp-route-Id="@item.Id">Editar</a>
+                               <a class="btn btn-outline-danger" asp-controller="Usuario" asp-action="DeletarUsuario" asp-route-Id="@item.Id">Deletar</a>
+                             </div>
+                        </p>
+                    </td>
+                        
+                </tr>
+            }
+    </tbody>
+
+    
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+
+
+}else{
+    <b><h2 class="container text-center">Não existem Usuarios Cadastardos!</h2></b>
+    <div class="btn2"><p  class="container text-center"><a href="/Usuario/CadastroUsuario" class="btn btn-outline-dark" >Cadastrar Usario</a></p></div>
+        }
+
+
+
+
+
+

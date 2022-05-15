@@ -1,0 +1,43 @@
+@using PI_SITE.Models
+@model Usuario
+
+@{
+    ViewData["Title"] = "CadastroUsuario";
+}
+
+<div class="container text-center"><h3 class="display-4">Cadastrar Novo Usuário</h3></div>
+
+<div class="container w-50 jumbotron">
+    <form method="POST" asp-action="CadastroUsuario">   
+        <div class="form-group">   
+
+            <p><label asp-for="Nome">Nome: </label>
+			<input class="form-control" asp-for="Nome" type="text" maxlength="90" autocomplete="off" required autofocus /></p>
+
+            <p><label asp-for="DataNascimento">Data de Nascimento: </label>
+			<input class="form-control" asp-for="DataNascimento" type="date" maxlength="90" autocomplete="off" required autofocus /></p>
+
+            <p><label asp-for="Contato">Contato: </label>
+			<input class="form-control" asp-for="Contato" type="number" maxlength="90" autocomplete="off" required autofocus /></p>
+
+            <p><label asp-for="Email">E-Mail: </label>
+			<input class="form-control" asp-for="Email" type="email" maxlength="90" autocomplete="off" required autofocus /></p>
+
+            <p><label asp-for="Login">Login: </label>
+			<input class="form-control" asp-for="Login" type="text" maxlength="90" autocomplete="off" required autofocus /></p>
+
+            <p><label asp-for="Senha">Senha: </label>
+			<input class="form-control" asp-for="Senha" type="password" maxlength="90" autocomplete="off" required autofocus /></p>
+             
+            <input type="hidden" asp-for="Conta" name="Conta" value="Usuario">
+            
+
+            <div class="btn_cadastrar"><p><input class="btn btn-info" type="submit" value="Cadastrar" /></p></div>
+
+            <div class="btn_limpar"><p><input  class="btn btn-outline-warning" type="reset" value="Limpar"></p></div>
+
+            <div class="btn_cancelar"><p><a class="btn btn-outline-danger" href="/Usuario/ListarUsuario">Cancelar</a></p></div>
+            
+        </div>   	
+    </form>
+</div>

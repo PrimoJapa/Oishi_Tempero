@@ -1,0 +1,78 @@
+@using Microsoft.AspNetCore.Http;
+@model IEnumerable<Mensagem>    
+@using PI_SITE.Models
+@{
+    ViewData["Title"] = "ListaMensagem";
+}
+
+<div class="homet"><img src="~/images/banner-contato.jpg" width="100%"></div><br>  
+
+<div class="container text-center"><h3 class="display-4">Mensagens</h3></div>
+
+@if (Model.Count() != 0){
+
+//Apresentar Lista de Usuarios!
+
+<table class="table table-dark" style="width: 100%">
+    <thead>
+        <tr class="container text-center">
+            <strong>
+                <th scope="col">Cod</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+                <th scope="col">Assunto</th>
+                <th scope="col">Message</th>
+                @if(Context.Session.GetString("Conta") == "Administrador" )
+                {
+                   <th scope="col">Ação</th>
+                }
+               
+            </strong>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+        @foreach (Mensagem item in Model)
+           {
+                <tr  class="container text-center">
+                    <td>@item.Id</td>
+                    <td>@item.Nome</td>
+                    <td>@item.Email</td>
+                    <td>@item.Assunto</td>
+                    <td>@item.Message</td>
+                     @if(Context.Session.GetString("Conta") == "Administrador" )
+                     {
+                     <td>
+                        <p>
+                            <a class="btn btn-outline-danger" asp-controller="Mensagem" asp-action="DeletarMensagem" asp-route-Id="@item.Id">Remover</a>
+                        </p>
+                      </td>
+                     }
+                     
+                    
+                        
+                </tr>
+            }
+    </tbody>
+
+    
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+
+
+}else{
+    <b><h2 class="container text-center">A Caixa de entrada estiver vazia!!!</h2></b>
+}
