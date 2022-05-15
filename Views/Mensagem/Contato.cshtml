@@ -7,27 +7,31 @@
 
 <section class="Contato">	
  
-  <div class="banner-topo"><img src="~/images/banner-contato.jpg" width="100%"></div>
+  <div class="banner-topo" id="banner-contato"><img src="~/images/banner-contato.jpg" width="100%"></div>
 
   <div class="telacontato" id="contato">
     <p class="titulo2 vermelho">Contato</p>
       <h1>Deseja nos enviar um e-mail?<br>Utilize o formulário abaixo:</h1>
       
-        <form method="POST" asp-action="Contato"> 
+        <form method="POST" asp-action="Contato" id="formulario"> 
         
+          <h5><span class='msg-erro msg-nome'></span></h5>
           <label asp-for="Nome">Nome Completo</label>
-          <input type="text" asp-for="Nome" id="Nome" placeholder="Nome Completo" required />
-
+          <input type="text" asp-for="Nome" id="Nome" placeholder="Nome Completo" />
+           
+          <h5><span class='msg-erro msg-mail'></span></h5> 
           <label asp-for="Email">E-mail</label>
-          <input type="Email" asp-for="Email" id="Email" placeholder="Seu E-mail Aqui" required />
-
+          <input type="text" asp-for="Email" id="Email" placeholder="Seu E-mail Aqui" />
+           
+          <h5><span class='msg-erro msg-assunto'></span></h5> 
           <label asp-for="Assunto">Assunto</label>
-          <input type="text" asp-for="Assunto" id="Assunto" placeholder="Exemplo *Sugestão* " required />
-
+          <input type="text" asp-for="Assunto" id="Assunto" placeholder="Exemplo *Sugestão* " />
+      
+          <h5><span class='msg-erro msg-mensagem'></span></h5>  
           <label asp-for="Message">Mensagem</label>
-          <textarea asp-for="Message" id="Message" placeholder="Olá, tudo bem....." required></textarea>
+          <textarea asp-for="Message" id="Message" placeholder="Olá, tudo bem....."></textarea>
 
-          <div class="btn_cadastrar"><p><input class="btn btn-danger" type="submit" value="Enviar" /></p></div>
+          <div class="btn_cadastrar"><input class="btn btn-danger" type="submit" value="Enviar" /></div>
           
         </form>
         <p><br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<br></p>

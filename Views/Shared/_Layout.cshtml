@@ -6,73 +6,70 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Oishi Tempero | Ecommerce Website </title>
+     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> 
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-green border-bottom box-shadow mb-3">
-            <div class="container">      
+        <nav class="navbar">
+            <div class="brand-title"><img src="~/images/logo.png" width="125px"></div>
 
-                <div><img src="~/images/logo.png" width="125px"></div>
+             
 
-                <script type="text/javascript">
-                        (function () {
-                            var options = {
-                                whatsapp: "+55 (19) 912345 6789", 
-                                call_to_action: "Entre em contato conosco!", 
-                                position: "left", 
-                            };
-                            var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
-                            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-                            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-                            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-                        })();
-                </script>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+            
+              <div class="navbar-links">
+                    <ul>
 
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-
-                        <li class="nav-item">
+                        <li>
                             <a class="nav-link text-dark"  asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Receitas">Receitas</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="OndeEncontrar">Onde Encontar</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Mensagem" asp-action="Contato">Fale Conosco</a>
                         </li>
 
                          @if(Context.Session.GetString("Conta") == "Administrador" )
                          {
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="ListarUsuario">Usuários</a>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="ListarUsuario">Usuarios</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Produto" asp-action="ListarProduto">Produtos</a>
                         </li>
 
-                        <li class="nav-item">
+                        <li>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Mensagem" asp-action="ListarMensagem">Mensagens</a>
                         </li>
 
                          }
                          @if(Context.Session.GetString("Conta") == "Colaborador" )
                             {
-                           <li class="nav-item">
+                           <li>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Mensagem" asp-action="ListarMensagem">Mensagens</a>
                         </li>
                             }
@@ -80,20 +77,20 @@
                             {
 
                             }
-                     </ul>
-                     @if(Context.Session.GetInt32("Id") != null)
+                         @if(Context.Session.GetInt32("Id") != null)
                             {                                                      
-                            <li class="nav-item">
+                            <li>
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Logout">logout</a>
                             </li>
                             }
                         @if(Context.Session.GetInt32("Id") == null)
                             {      
-                            <li class="nav-item">
+                            <li>
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Login">Login</a>
                             </li>                             
-                            }
-                </div>
+                            }   
+                     </ul>
+                     
             </div>
         </nav>
     </header>
@@ -103,11 +100,25 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container text-center">
-            &copy; 2021 - Oishi Temperos - Todos os direitos reservados.
-        </div>
-    </footer>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="container text-center">
+                            &copy; 2021 - Oishi Temperos - Todos os direitos reservados.
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </footer>
+
+        <a href="https://api.whatsapp.com/send?phone=55199123456789&text=Como%20posso%20ajudar!"
+            target="_blank"
+            style="position:fixed;bottom:20px;left:30px;">
+            <svg enable-background="new 0 0 512 512" width="50" height="50" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M256.064,0h-0.128l0,0C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104  l98.4-31.456C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z" fill="#4CAF50"/><path d="m405.02 361.5c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.62-127.46-112.58-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016 0.16 8.576 0.288 7.52 0.32 11.296 0.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744s-7.36 7.68-11.136 12.352c-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z" fill="#FAFAFA"/></svg>
+        </a>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -1,14 +1,26 @@
-using System.Collections.Generic;
 using PI_SITE.Models;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
 using MySqlConnector;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace PI_SITE.Controllers
 {
     public class MensagemController : Controller
     {
+
+        private readonly ILogger<MensagemController> _logger;
+
+        public MensagemController(ILogger<MensagemController> logger)
+        {
+            _logger = logger;
+        }
+
         public IActionResult ListarMensagem()
         {
             MensagemBanco mensagemBanco = new MensagemBanco();
@@ -22,7 +34,7 @@ namespace PI_SITE.Controllers
         }
 
         [HttpPost]
-        public IActionResult Contato(Mensagem mensagem)
+       public IActionResult Contato(Mensagem mensagem)
         {
             
             MensagemBanco mensagemBanco = new MensagemBanco();

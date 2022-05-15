@@ -38,7 +38,7 @@ namespace PI_SITE.Models
             return Lista;            
         }
 
-        public void AddMensagem(Mensagem  mensagem)
+        public void AddMensagem(Mensagem mensagem)
         {
             MySqlConnection Conexao = new MySqlConnection(DadosConexao);
             Conexao.Open();
